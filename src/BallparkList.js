@@ -26,13 +26,13 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-     <div>
+     <ul>
        {this.state.ballparks.map(function(ballpark, i) {
          return(
            <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
          );
        })}
-     </div>
+     </ul>
    );
  }
 }

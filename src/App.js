@@ -1,5 +1,5 @@
 import React from 'react';
-import BallparkList from './BallparkList'
+import { Link } from 'react-router';
 
 class App extends React.Component {
   constructor(){
@@ -8,10 +8,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <section>
-      <h3> Simple list of Ballparks </h3>
-        <BallparkList />
-      </section>
+      <div className>
+            <nav>
+              <ul>
+                <li><Link to="/">Home</Link></li>
+              </ul>
+            </nav>
+            {this.props.children}
+          </div>
     );
   }
 }

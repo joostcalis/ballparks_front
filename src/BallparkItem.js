@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import { Link } from 'react-router';
 
 class BallparkItem extends React.Component {
  constructor() {
@@ -10,9 +11,6 @@ class BallparkItem extends React.Component {
    this.setState({
      id: this.props.id,
      name: this.props.name,
-     team: this.props.team,
-     city: this.props.city,
-     description: this.props.description,
      average_rating: this.props.average_rating
    });
  }
@@ -23,12 +21,9 @@ class BallparkItem extends React.Component {
 
  render() {
    return(
-     <ul>
-     <li><strong>{this.state.name} ({this.state.average_rating})</strong></li>
-     <li><em>Team:</em> {this.state.team}</li>
-     <li><em>City:</em> {this.state.city}</li>
-     <li><em>Info:</em> {this.state.description}</li>
-     </ul>
+     <li>
+       <Link to={`/ballparks/${this.state.id}`}>{this.state.name}</Link> {this.state.average_rating}
+     </li>
    );
  }
 }
