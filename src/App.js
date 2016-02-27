@@ -1,5 +1,5 @@
 import React from 'react';
-import BallParkList from './BallParkList'
+import BallparkList from './BallparkList'
 
 class App extends React.Component {
   constructor(){
@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div>
       <h3> Simple list of Ballparks </h3>
-        <BallParkList />
+        <BallparkList />
       </div>
     );
   }
