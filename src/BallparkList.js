@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import BallparkItem from './BallparkItem';
 
 
 class BallparkList extends React.Component {
@@ -25,14 +26,13 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-    //  <ul>
-      //  {this.state.ballparks.map(function(todo, i) {
-      //    return(
-      //      <TodoItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
-      //    );
-      //  })}
-      <li>this will be  my ballparklist</li>
-    //  </ul>
+     <div>
+       {this.state.ballparks.map(function(ballpark, i) {
+         return(
+           <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+         );
+       })}
+     </div>
    );
  }
 }
