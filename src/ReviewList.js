@@ -1,9 +1,9 @@
-import React from 'React';
+import React from 'react';
 import jQuery from 'jquery';
 import ReviewItem from "./ReviewItem"
 
 class ReviewList extends React.Component {
-  Constructor(){
+  constructor(){
     super();
     this.state = {
       reviews: []
@@ -26,7 +26,7 @@ class ReviewList extends React.Component {
   render(){
     return(
       <ul>
-        {this.state.tasks.map(function(task, i) {
+        {this.state.reviews.map(function(review, i) {
           return (
             < ReviewItem key={review.id} id={review.id} concession={review.concession} extra_activity_rating={review.extra_activity_rating} general_experience={review.general_experience} description={review.description} />
           );

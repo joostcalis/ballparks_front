@@ -1,6 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
-import ReviewList from 'ReviewList';
+import ReviewList from './ReviewList';
 
 class Ballpark extends React.Component {
  constructor() {
@@ -37,9 +37,7 @@ class Ballpark extends React.Component {
        <li><em>City:</em> {this.state.ballpark.city}</li>
        <li><em>Info:</em> {this.state.ballpark.description}</li>
        </ul>
-     </div>
-     <div>
-     <ReviewList ballparkId={this.props.params.ballparkId} />
+       <ReviewList ballparkId={this.props.params.ballparkId} />
      </div>
    );
  }
