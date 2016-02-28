@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import ReviewList from 'ReviewList';
 
 class Ballpark extends React.Component {
  constructor() {
@@ -29,12 +30,17 @@ class Ballpark extends React.Component {
 
  render() {
    return(
-     <ul>
-     <li><strong>{this.state.ballpark.name} ({this.state.ballpark.average_rating})</strong></li>
-     <li><em>Team:</em> {this.state.ballpark.team}</li>
-     <li><em>City:</em> {this.state.ballpark.city}</li>
-     <li><em>Info:</em> {this.state.ballpark.description}</li>
-     </ul>
+     <div>
+       <ul>
+       <li><strong>{this.state.ballpark.name} ({this.state.ballpark.average_rating})</strong></li>
+       <li><em>Team:</em> {this.state.ballpark.team}</li>
+       <li><em>City:</em> {this.state.ballpark.city}</li>
+       <li><em>Info:</em> {this.state.ballpark.description}</li>
+       </ul>
+     </div>
+     <div>
+     <ReviewList ballparkId={this.props.params.ballparkId} />
+     </div>
    );
  }
 }
