@@ -1,6 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import ReviewItem from "./ReviewItem"
+import ReviewForm from "./ReviewForm"
 
 class ReviewList extends React.Component {
   constructor(){
@@ -10,7 +11,11 @@ class ReviewList extends React.Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
+    this.displayReviews();
+  }
+
+  displayReviews() {
     let component = this;
     let ballparkId = this.props.ballparkId;
 
@@ -25,13 +30,16 @@ class ReviewList extends React.Component {
 
   render(){
     return(
-      <ul>
-        {this.state.reviews.map(function(review, i) {
-          return (
-            < ReviewItem key={review.id} id={review.id} concession={review.concession} extra_activity_rating={review.extra_activity_rating} general_experience={review.general_experience} description={review.description} />
-          );
-        }, this)}
-      </ul>
+      <div>
+        <ReviewForm onChange={this.displayReviews.bind(this)} ballparkId={this.props.ballparkId} />
+        <ul>
+          {this.state.reviews.map(function(review, i) {
+            return (
+              < ReviewItem key={review.id} id={review.id} concession={review.concession} extra_activity_rating={review.extra_activity_rating} general_experience={review.general_experience} description={review.description} />
+            );
+          }, this)}
+        </ul>
+      </div>
     );
   }
 }
