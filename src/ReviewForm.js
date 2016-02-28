@@ -15,6 +15,7 @@ class ReviewForm extends React.Component {
     let concession = this.refs.concessionInput.value;
     let extra_activity_rating = this.refs.extraActivityInput.value;
     let description = this.refs.descriptionInput.value;
+    let overall_rating = Math.round(this.getOverallRating(general_experience, concession, extra_activity_rating));
 
 
     let newReview = {
@@ -22,7 +23,8 @@ class ReviewForm extends React.Component {
       general_experience: general_experience,
       concession: concession,
       extra_activity_rating: extra_activity_rating,
-      description: description
+      description: description,
+      overall_rating: overall_rating
     };
 
     jQuery.ajax({
@@ -45,6 +47,12 @@ class ReviewForm extends React.Component {
       .fail(function(error) {
         console.log(error);
       });
+  }
+
+  getOverallRating(a,b,c) {
+    let sum = (a * 1) + (b * 1) + (c * 1);
+    let overallRating = sum / 3;
+    return overallRating;
   }
 
 
