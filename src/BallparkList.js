@@ -8,7 +8,12 @@ class BallparkList extends React.Component {
    super();
 
    this.state = {
-     ballparks: []
+     al_west: [],
+     al_central: [],
+     al_east: [],
+     nl_west: [],
+     nl_central: [],
+     nl_east: []
    };
  }
 
@@ -19,22 +24,86 @@ class BallparkList extends React.Component {
      console.log("getting data");
 
      component.setState({
-       ballparks: data.ballparks
+       al_west: data.al_west,
+       al_central: data.al_central,
+       al_east: data.al_east,
+       nl_west: data.nl_west,
+       nl_cental: data.nl_cental,
+       nl_east: data.nl_east
      });
    });
  }
 
  render() {
    return (
-     <ul>
-       {this.state.ballparks.map(function(ballpark, i) {
-         return(
-           <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
-         );
-       })}
-     </ul>
-   );
- }
+     <div className="cont">
+      <div className="r">
+        <div className="column1">
+          <h2> A.L West </h2>
+            <div className="li-gr">
+          {this.state.al_west.map(function(ballpark, i) {
+            return(
+              <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+            );
+          }, this)}
+          </div>
+        </div>
+        <div className="column2">
+          <h2> A.L Central </h2>
+            <div className="li-gr">
+          {this.state.al_central.map(function(ballpark, i) {
+            return(
+              <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+            );
+          }, this)}
+          </div>
+        </div>
+        <div className="column3">
+          <h2> A.L East </h2>
+            <div className="li-gr">
+          {this.state.al_east.map(function(ballpark, i) {
+            return(
+              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+            );
+          }, this)}
+          </div>
+        </div>
+      </div>
+      <div className="r">
+        <div className="column1">
+          <h2> N.L West </h2>
+            <div className="li-gr">
+          {this.state.nl_west.map(function(ballpark, i) {
+            return(
+              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+            );
+          }, this)}
+            </div>
+        </div>
+        <div className="column2">
+          <h2> N.L Central </h2>
+            <div className="li-gr">
+          {this.state.nl_central.map(function(ballpark, i) {
+            return(
+              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+            );
+          }, this)}
+          </div>
+        </div>
+        <div className="column3">
+          <h2> N.L East </h2>
+            <div className="li-gr">
+          {this.state.nl_east.map(function(ballpark, i) {
+            return(
+              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+            );
+          }, this)}
+          </div>
+        </div>
+      </div>
+    </div>
+    );
+  }
 }
 
 export default BallparkList;
