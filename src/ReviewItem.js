@@ -19,7 +19,7 @@ class ReviewItem extends React.Component {
   render() {
     return(
       <li>
-        <p>overall rating: {this.props.overall_rating}</p>
+        <p>{this.props.name} gave an overall rating of: {this.props.overall_rating}</p>
         <p>general experience rating: {this.props.general_experience}</p>
         <p>extra activity rating: {this.props.extra_activity_rating}</p>
         <p>concession rating: {this.props.concession}</p>

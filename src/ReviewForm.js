@@ -11,6 +11,7 @@ class ReviewForm extends React.Component {
 
     let component = this;
     let ballparkId = this.props.ballparkId;
+    let name = this.refs.nameInput.value;
     let general_experience = this.refs.generalExperienceInput.value;
     let concession = this.refs.concessionInput.value;
     let extra_activity_rating = this.refs.extraActivityInput.value;
@@ -20,6 +21,7 @@ class ReviewForm extends React.Component {
 
     let newReview = {
       id: null,
+      name: name,
       general_experience: general_experience,
       concession: concession,
       extra_activity_rating: extra_activity_rating,
@@ -38,6 +40,7 @@ class ReviewForm extends React.Component {
     })
       .done(function(data) {
         component.props.onChange();
+        component.refs.nameInput.value = "";
         component.refs.generalExperienceInput.value = "";
         component.refs.concessionInput.value = "";
         component.refs.extraActivityInput.value = "";
@@ -60,6 +63,9 @@ class ReviewForm extends React.Component {
     return(
       <div>
         <form onSubmit={this.createReview.bind(this)}>
+            <p> your name
+              <input type="text" ref="nameInput" placeholder="your name here"/>
+            </p>
             <p> rate your general experience
               <input type="integer" ref="generalExperienceInput" placeholder="rate ur general experience"/>
             </p>
