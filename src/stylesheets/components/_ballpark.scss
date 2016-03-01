@@ -39,6 +39,7 @@ vertical-align: middle;
 
 .image-holder {
   @extend .pull-right;
+  @extend .img-rounded;
   height: 60%;
   width: 60%;
 }
