@@ -1,6 +1,6 @@
 .nav {
   @extend .navbar;
-  @extend .navbar-default;
+  @extend .navbar-inverse;
 
 
 }
@@ -33,5 +33,5 @@
 .act {
   @extend .active;
 
-  
+
 }
