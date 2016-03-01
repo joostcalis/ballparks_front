@@ -1,0 +1,40 @@
+.cont {
+  @extend .container-fluid;
+
+}
+
+.r {
+  @extend .row;
+
+}
+
+.column1 {
+  @extend .col-md-4;
+  margin-top: 40px;
+
+
+}
+
+.column2 {
+  @extend .col-md-4;
+  margin-top: 40px;
+
+
+}
+
+.column3 {
+  @extend .col-md-4;
+  margin-top: 40px;
+
+
+}
+
+.li-gr {
+  @extend .list-group;
+
+
+}
+
+h2 {
+  text-align: center;
+}
