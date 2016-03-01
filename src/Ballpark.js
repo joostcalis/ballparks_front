@@ -7,7 +7,8 @@ class Ballpark extends React.Component {
    super();
    this.state = {
      ballpark: {},
-     average_rating: ""
+     average_rating: "",
+     reviews: []
    };
  }
 
@@ -32,15 +33,30 @@ class Ballpark extends React.Component {
 
  render() {
    return(
-     <div>
-       <ul>
-       <li><strong>{this.state.ballpark.name} ({this.state.average_rating})</strong></li>
-       <li><em>Team:</em> {this.state.ballpark.team}</li>
-       <li><em>City:</em> {this.state.ballpark.city}</li>
-       <li><em>Info:</em> {this.state.ballpark.description}</li>
-       </ul>
-       <ReviewList ballparkId={this.props.params.ballparkId} />
-     </div>
+     <div className="cont">
+      <div className="r-header">
+        <div className="column1">
+          <h3>{this.state.ballpark.league}</h3>
+        </div>
+        <div className="column2">
+          <h1>{this.state.ballpark.name} ({this.state.average_rating})</h1>
+        </div>
+        <div className="column3">
+          <h3>{this.state.ballpark.team}</h3>
+        </div>
+      </div>
+      <div className="r">
+        <div className="column-half">
+          <p>{this.state.ballpark.description}</p>
+        </div>
+        <div className="column-half">
+          <img src="http://sabrtoothedtigers.files.wordpress.com/2013/06/pnc-park-1280.jpg" className="image-holder"></img>
+        </div>
+      </div>
+
+        <ReviewList ballparkId={this.props.params.ballparkId} />
+
+    </div>
    );
  }
 }

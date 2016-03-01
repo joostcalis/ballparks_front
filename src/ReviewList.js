@@ -30,16 +30,20 @@ class ReviewList extends React.Component {
 
   render(){
     return(
-      <div>
-        <ReviewForm onChange={this.displayReviews.bind(this)} ballparkId={this.props.ballparkId} />
-        <ul>
+      <div className="r">
+      <div className="column-half">
+        <div className="p-group" id="accordion">
           {this.state.reviews.map(function(review, i) {
             return (
               < ReviewItem key={review.id} id={review.id} concession={review.concession} extra_activity_rating={review.extra_activity_rating} general_experience={review.general_experience} description={review.description} overall_rating={review.overall_rating} name={review.name} />
             );
           }, this)}
-        </ul>
-      </div>
+        </div>
+        </div>
+        <div className="column-half">
+          <ReviewForm onChange={this.displayReviews.bind(this)} ballparkId={this.props.ballparkId} />
+        </div>
+        </div>
     );
   }
 }

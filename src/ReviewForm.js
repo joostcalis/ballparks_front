@@ -61,26 +61,47 @@ class ReviewForm extends React.Component {
 
   render() {
     return(
-      <div>
-        <form onSubmit={this.createReview.bind(this)}>
-            <p> your name
-              <input type="text" ref="nameInput" placeholder="your name here"/>
-            </p>
-            <p> rate your general experience
-              <input type="integer" ref="generalExperienceInput" placeholder="rate ur general experience"/>
-            </p>
-            <p> rate the concessions
-              <input type="integer" ref="concessionInput" placeholder="rate the concessions"/>
-            </p>
-            <p> rate extra activities in the ballpark
-              <input type="integer" ref="extraActivityInput" placeholder="extra activities"/>
-            </p>
-            <p> add a comment about your experience
-              <textarea type="text" rows="5" placeholder="comment"  ref="descriptionInput"/>
-            </p>
-            <button type="submit">Add Review</button>
-        </form>
-      </div>
+        <form role="form" onSubmit={this.createReview.bind(this)}>
+          <div className="f-group">
+            <label>Name:</label>
+            <input type="text" ref="nameInput" className="f-control"></input>
+          </div>
+          <div className="f-group">
+            <label>General Experience:</label>
+              <select className="f-control" ref="generalExperienceInput">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+          </div>
+          <div className="f-group">
+            <label>Food & Beverage:</label>
+              <select className="f-control" ref="concessionInput">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+          </div>
+          <div className="f-group">
+            <label>Extra activities:</label>
+              <select className="f-control" ref="extraActivityInput">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+          </div>
+          <div className="f-group">
+            <label>Say something about your visit:</label>
+              <textarea className="f-control" rows="3" ref="descriptionInput"></textarea>
+          </div>
+          <button type="submit" className="formbutton">Add Review</button>
+      </form>
     );
   }
 }
