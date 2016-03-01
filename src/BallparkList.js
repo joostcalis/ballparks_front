@@ -28,7 +28,7 @@ class BallparkList extends React.Component {
        al_central: data.al_central,
        al_east: data.al_east,
        nl_west: data.nl_west,
-       nl_cental: data.nl_cental,
+       nl_central: data.nl_central,
        nl_east: data.nl_east
      });
    });
