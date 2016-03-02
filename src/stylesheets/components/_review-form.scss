@@ -1,0 +1,12 @@
+.f-group {
+  @extend .form-group;
+}
+
+.f-control {
+  @extend .form-control;
+}
+
+.formbutton {
+  @extend .btn;
+  @extend .btn-default;
+}

@@ -1,0 +1,14 @@
+.column-half {
+@extend .col-md-6;
+
+}
+
+.p-group {
+@extend .panel-group;
+
+}
+
+.r {
+  @extend .row;
+  margin-top: 10px;
+}

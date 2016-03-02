@@ -1,0 +1,21 @@
+.pan-def {
+  @extend .panel;
+  @extend .panel-default;
+}
+
+.p-heading {
+  @extend .panel-heading;
+}
+
+.p-title {
+  @extend .panel-title;
+}
+
+.p-collapse {
+  @extend .panel-collapse;
+  
+}
+
+.p-body {
+  @extend .panel-body
+}
