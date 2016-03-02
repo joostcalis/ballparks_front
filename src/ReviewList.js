@@ -35,7 +35,7 @@ class ReviewList extends React.Component {
         <div className="p-group" id="accordion">
           {this.state.reviews.map(function(review, i) {
             return (
-              < ReviewItem key={review.id} id={review.id} concession={review.concession} extra_activity_rating={review.extra_activity_rating} general_experience={review.general_experience} description={review.description} overall_rating={review.overall_rating} name={review.name} />
+              <ReviewItem key={review.id} id={review.id} concession={review.concession} extra_activity_rating={review.extra_activity_rating} general_experience={review.general_experience} description={review.description} overall_rating={review.overall_rating} name={review.name} />
             );
           }, this)}
         </div>

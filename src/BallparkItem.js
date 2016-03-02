@@ -5,6 +5,12 @@ import { Link } from 'react-router';
 class BallparkItem extends React.Component {
  constructor() {
    super();
+
+   this.state = {
+     id: null,
+     name: "",
+     average_rating: 0
+   };
  }
 
  componentDidMount() {
