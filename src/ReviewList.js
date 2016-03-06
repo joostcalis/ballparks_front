@@ -26,6 +26,7 @@ class ReviewList extends React.Component {
         reviews: data.reviews
       });
     });
+    component.props.onChange();
   }
 
   render(){

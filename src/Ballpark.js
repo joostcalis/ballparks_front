@@ -54,7 +54,7 @@ class Ballpark extends React.Component {
         </div>
       </div>
 
-        <ReviewList ballparkId={this.props.params.ballparkId} />
+        <ReviewList onChange={this.getBallpark.bind(this)} ballparkId={this.props.params.ballparkId} />
 
     </div>
    );
