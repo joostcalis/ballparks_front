@@ -1,6 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import BallparkItem from './BallparkItem';
+import model from "./Model";
 
 
 class BallparkList extends React.Component {
@@ -17,21 +18,27 @@ class BallparkList extends React.Component {
    };
  }
 
+  loadBallparks(event) {
+    let component = this;
+
+    function onDone(data) {
+       console.log("loaded ballparks succesfully");
+
+       component.setState({
+         al_west: data.al_west,
+         al_central: data.al_central,
+         al_east: data.al_east,
+         nl_west: data.nl_west,
+         nl_central: data.nl_central,
+         nl_east: data.nl_east
+       });
+    }
+
+    model.ballparks.index( onDone );
+  }
+
  componentDidMount() {
-   let component = this;
-
-   jQuery.getJSON("https://ballparks.herokuapp.com/ballparks", function(data) {
-     console.log("getting data");
-
-     component.setState({
-       al_west: data.al_west,
-       al_central: data.al_central,
-       al_east: data.al_east,
-       nl_west: data.nl_west,
-       nl_central: data.nl_central,
-       nl_east: data.nl_east
-     });
-   });
+   this.loadBallparks();
  }
 
  render() {

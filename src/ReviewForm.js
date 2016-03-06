@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import model from './Model';
 
 class ReviewForm extends React.Component {
   constructor() {
@@ -29,27 +30,20 @@ class ReviewForm extends React.Component {
       overall_rating: overall_rating
     };
 
-    jQuery.ajax({
-      type: "POST",
-      url: "https://ballparks.herokuapp.com/ballparks/" + ballparkId + "/reviews.json",
-      data: JSON.stringify({
-          review: newReview
-      }),
-      contentType: "application/json",
-      dataType: "json"
-    })
-      .done(function(data) {
-        component.props.onChange();
-        component.refs.nameInput.value = "";
-        component.refs.generalExperienceInput.value = "";
-        component.refs.concessionInput.value = "";
-        component.refs.extraActivityInput.value = "";
-        component.refs.descriptionInput.value = "";
-      })
+    function onDone(data) {
+      component.props.onChange();
+      component.refs.nameInput.value = "";
+      component.refs.generalExperienceInput.value = "";
+      component.refs.concessionInput.value = "";
+      component.refs.extraActivityInput.value = "";
+      component.refs.descriptionInput.value = "";
+    }
 
-      .fail(function(error) {
-        console.log(error);
-      });
+      function onFail(error) {
+         console.log(error);
+      }
+
+      model.ballparkReviews.create( newReview, onDone, onFail, ballparkId );
   }
 
   getOverallRating(a,b,c) {
