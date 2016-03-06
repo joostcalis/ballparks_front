@@ -1,6 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import ReviewList from './ReviewList';
+import model from "./Model";
 
 class Ballpark extends React.Component {
  constructor() {
@@ -17,18 +18,19 @@ class Ballpark extends React.Component {
  }
 
  getBallpark(){
-   let BallparkId = this.props.params.ballparkId;
+   console.log("getting single ballpark from server");
+   let ballparkId = this.props.params.ballparkId;
    let component = this;
 
-   jQuery.getJSON("https://ballparks.herokuapp.com/ballparks/" + BallparkId + ".json", function(data) {
-
-     console.log("getting single ballpark from server");
-
+   function onDone(data) {
      component.setState({
        ballpark: data.ballpark,
        average_rating: data.average_rating
      });
-   });
+   }
+
+   model.ballparks.show(onDone, ballparkId);
+
  }
 
  render() {

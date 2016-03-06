@@ -2,6 +2,7 @@ import React from 'react';
 import jQuery from 'jquery';
 import ReviewItem from "./ReviewItem"
 import ReviewForm from "./ReviewForm"
+import model from "./Model";
 
 class ReviewList extends React.Component {
   constructor(){
@@ -19,14 +20,17 @@ class ReviewList extends React.Component {
     let component = this;
     let ballparkId = this.props.ballparkId;
 
+    function onDone(data) {
+       console.log("loading reviews attached to ballpark");
 
-    jQuery.getJSON("https://ballparks.herokuapp.com/ballparks/" + ballparkId + ".json", function(data) {
-      console.log("getting reviews attached to ballpark");
-      component.setState({
-        reviews: data.reviews
-      });
-    });
-    component.props.onChange();
+       component.setState({
+          reviews: data.reviews
+       });
+
+       component.props.onChange();
+    }
+
+    model.ballparkReviews.index( onDone, ballparkId );
   }
 
   render(){

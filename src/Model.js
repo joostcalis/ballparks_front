@@ -7,6 +7,37 @@ import jQuery from 'jquery';
     index( onDone ) {
       jQuery.getJSON( "https://ballparks.herokuapp.com/ballparks", onDone );
     }
+
+    show( onDone, ballparkId ) {
+      jQuery.getJSON( "https://ballparks.herokuapp.com/ballparks/" + ballparkId + ".json", onDone );
+    }
+ }
+
+ class BallparkReviews {
+    constructor() {
+    }
+
+
+    index( onDone, ballparkId ) {
+      jQuery.getJSON( "https://ballparks.herokuapp.com/ballparks/" + ballparkId + ".json", onDone );
+    }
+
+    create( review, onDone, onFail, ballparkId )
+    {
+       let data = JSON.stringify({ review: review });
+
+       console.log( "creating new review" );
+
+       let request = {
+          type: "POST",
+          url: "https://ballparks.herokuapp.com/ballparks/" + ballparkId + "/reviews.json",
+          data: data,
+          contentType: "application/json",
+          dataType: "json"
+       };
+
+       jQuery.ajax( request ).done( onDone ).fail( onFail );
+    }
  }
 
 
@@ -14,6 +45,7 @@ import jQuery from 'jquery';
  class Model {
     constructor() {
        this.ballparks = new Ballparks;
+       this.ballparkReviews = new BallparkReviews;
     }
  }
 
