@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './Navbar';
 import { Link } from 'react-router';
 import './stylesheets/components.scss';
 
@@ -10,16 +11,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <nav className="nav">
-        <div className="cont">
-          <div className="nav-header">
-            <a className="nav-brand" href="#">Ballparks</a>
-          </div>
-          <ul className="nav1">
-            <li className="act"><Link to="/">Home</Link></li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar />
+
 
       {this.props.children}
       </div>
