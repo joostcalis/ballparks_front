@@ -2,6 +2,7 @@ import React from 'react';
 import jQuery from 'jquery';
 import BallparkItem from './BallparkItem';
 import model from "./Model";
+import Loader from 'react-loader'
 
 
 class BallparkList extends React.Component {
@@ -14,7 +15,8 @@ class BallparkList extends React.Component {
      al_east: [],
      nl_west: [],
      nl_central: [],
-     nl_east: []
+     nl_east: [],
+     loaded: false
    };
  }
 
@@ -30,7 +32,8 @@ class BallparkList extends React.Component {
          al_east: data.al_east,
          nl_west: data.nl_west,
          nl_central: data.nl_central,
-         nl_east: data.nl_east
+         nl_east: data.nl_east,
+         loaded: true
        });
     }
 
@@ -44,6 +47,7 @@ class BallparkList extends React.Component {
  render() {
    return (
      <div className="cont">
+      <Loader loaded={this.state.loaded}>
       <div className="r">
         <div className="column1">
           <h2> A.L West </h2>
@@ -108,6 +112,7 @@ class BallparkList extends React.Component {
           </div>
         </div>
       </div>
+      </Loader>
     </div>
     );
   }
