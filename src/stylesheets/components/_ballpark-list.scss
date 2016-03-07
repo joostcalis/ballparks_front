@@ -1,5 +1,7 @@
 .cont {
   @extend .container-fluid;
+  // background-image: url(https://baseballnorthwest.com/wp-content/uploads/2016/01/stadium.jpg);
+
 
 }
 
@@ -11,7 +13,7 @@
 .column1 {
   @extend .col-md-4;
   margin-top: 3px;
-  text-align: center;
+  // text-align: center;
 
 
 }
@@ -19,7 +21,7 @@
 .column2 {
   @extend .col-md-4;
   margin-top: 3px;
-  text-align: center;
+  // text-align: center;
 
 
 }
@@ -27,7 +29,7 @@
 .column3 {
   @extend .col-md-4;
   margin-top: 3px;
-  text-align: center;
+  // text-align: center;
 
 
 }
