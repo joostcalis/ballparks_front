@@ -2,6 +2,7 @@ import React from 'react';
 import jQuery from 'jquery';
 import ReviewList from './ReviewList';
 import model from "./Model";
+import Loader from "react-loader"
 
 class Ballpark extends React.Component {
  constructor() {
@@ -9,7 +10,8 @@ class Ballpark extends React.Component {
    this.state = {
      ballpark: {},
      average_rating: "",
-     reviews: []
+     reviews: [],
+     loaded: false
    };
  }
 
@@ -25,7 +27,8 @@ class Ballpark extends React.Component {
    function onDone(data) {
      component.setState({
        ballpark: data.ballpark,
-       average_rating: data.average_rating
+       average_rating: data.average_rating,
+       loaded: true
      });
    }
 
@@ -36,6 +39,7 @@ class Ballpark extends React.Component {
  render() {
    return(
      <div className="cont">
+      <Loader loaded={this.state.loaded}>
       <div className="r-header">
         <div className="column1">
           <h2>{this.state.ballpark.league}</h2>
@@ -57,7 +61,7 @@ class Ballpark extends React.Component {
       </div>
 
         <ReviewList onChange={this.getBallpark.bind(this)} ballparkId={this.props.params.ballparkId} />
-
+        </Loader>
     </div>
    );
  }
