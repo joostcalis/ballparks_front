@@ -46,7 +46,7 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-     <div className="cont">
+     <div className="cont1">
       <Loader loaded={this.state.loaded} color="#1a75ff">
       <div className="r">
         <div className="column1">

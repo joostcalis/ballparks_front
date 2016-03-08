@@ -1,9 +1,18 @@
-.cont {
+.cont1 {
   @extend .container-fluid;
-  // background-image: url(https://baseballnorthwest.com/wp-content/uploads/2016/01/stadium.jpg);
-
-
 }
+
+  // background-image: url(https://baseballnorthwest.com/wp-content/uploads/2016/01/stadium.jpg);
+// body {
+//   background-image: url(http://s8.postimg.org/oj2ta0pr9/stadium1.jpg);
+//   background-size: cover;
+// }
+
+body {
+  background-color: #dcdbed;
+}
+
+
 
 .r {
   @extend .row;
