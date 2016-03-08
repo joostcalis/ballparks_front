@@ -39,7 +39,7 @@ class Ballpark extends React.Component {
  render() {
    return(
      <div className="cont">
-      <Loader loaded={this.state.loaded}>
+      <Loader loaded={this.state.loaded} color="#1a75ff" shadow={true}>
       <div className="r-header">
         <div className="column1">
           <h2>{this.state.ballpark.league}</h2>
