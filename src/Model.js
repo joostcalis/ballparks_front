@@ -40,12 +40,23 @@ import jQuery from 'jquery';
     }
  }
 
+ class News {
+    constructor() {
+    }
+
+    index( onDone ) {
+      jQuery.getJSON( "https://ballparks.herokuapp.com/feeds", onDone );
+    }
+
+ }
+
 
 
  class Model {
     constructor() {
        this.ballparks = new Ballparks;
        this.ballparkReviews = new BallparkReviews;
+       this.news = new News;
     }
  }
 
