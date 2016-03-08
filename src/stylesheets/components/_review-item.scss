@@ -1,6 +1,7 @@
 .pan-def {
   @extend .panel;
   @extend .panel-default;
+  opacity: 0.9;
 }
 
 .p-heading {
@@ -9,6 +10,11 @@
 
 .p-title {
   @extend .panel-title;
+}
+
+.p-title:hover {
+  @extend .panel-title;
+  text-decoration: none;
 }
 
 .p-collapse {

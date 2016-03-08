@@ -21,7 +21,7 @@ class ReviewItem extends React.Component {
       <div className="pan-def">
         <div className="p-heading">
           <h4 className="p-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">{this.props.name} gave an overall rating of: {this.props.overall_rating}</a>
+            <a data-toggle="collapse" className="form-link"data-parent="#accordion" href="#collapse1">{this.props.name} gave an overall rating of: {this.props.overall_rating}</a>
           </h4>
         </div>
         <div id="collapse1" className="p-collapse">

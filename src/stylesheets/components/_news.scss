@@ -1,7 +1,10 @@
-.nav-right {
+.navbar-feed {
+
+float: right;
+}
+
+.navbar-right {
   @extend .nav;
   @extend .navbar-nav;
   @extend .navbar-right;
-  border: none;
-  width: 40%;
 }
