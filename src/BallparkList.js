@@ -47,7 +47,7 @@ class BallparkList extends React.Component {
  render() {
    return (
      <div className="cont">
-      <Loader loaded={this.state.loaded}>
+      <Loader loaded={this.state.loaded} color="#1a75ff">
       <div className="r">
         <div className="column1">
           <h2> A.L West </h2>

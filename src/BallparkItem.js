@@ -27,10 +27,11 @@ class BallparkItem extends React.Component {
 
  render() {
    return(
-
+      <Link className="ballparkLink" to={`/ballparks/${this.state.id}`}>
        <li className="li-gr-item">
-         <Link to={`/ballparks/${this.state.id}`}>{this.state.name}</Link> {this.state.average_rating}
+         {this.state.name}<span className="ballpark-rating">({this.state.average_rating})</span>
        </li>
+       </Link>
    );
  }
 }
