@@ -21,10 +21,6 @@ class BallparkItem extends React.Component {
    });
  }
 
-
-
-
-
  render() {
    return(
       <Link className="ballparkLink" to={`/ballparks/${this.state.id}`}>

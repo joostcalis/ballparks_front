@@ -3,7 +3,7 @@ import jQuery from 'jquery';
 import BallparkItem from './BallparkItem';
 import model from "./Model";
 import Loader from 'react-loader'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class BallparkList extends React.Component {
  constructor() {
@@ -46,6 +46,7 @@ class BallparkList extends React.Component {
 
  render() {
    return (
+     <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
      <div className="cont1">
       <Loader loaded={this.state.loaded} color="#1a75ff">
       <div className="r">
@@ -114,6 +115,7 @@ class BallparkList extends React.Component {
       </div>
       </Loader>
     </div>
+    </ReactCSSTransitionGroup>
     );
   }
 }
