@@ -5,17 +5,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
   border: 3px solid black;
 }
 
 .welcome1 {
+  color: black;
   font-size: 150%;
   text-align: center;
   text-shadow: 4px 4px 8px black;
 }
 
 .welcome1 >h1 {
+  color: white;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
   font-size: 350%;
   font-family: "Architects Daughter";
+  text-shadow: 4px 4px 4px black;
 }
