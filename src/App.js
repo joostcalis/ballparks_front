@@ -3,12 +3,14 @@ import Navbar from './Navbar';
 import { Link } from 'react-router';
 import './stylesheets/components.scss';
 import Welcome from './Welcome';
+import Dashboard from './Dashboard';
 
 class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      continue: false
+      continue: false,
+      shownews: true
     };
   }
 
@@ -42,7 +44,7 @@ class App extends React.Component {
       welcome = "";
     }
     else {
-      navbar = <Welcome continue={this.continueSwitch.bind(this)} />;
+      welcome = <Welcome continue={this.continueSwitch.bind(this)} />;
     }
 
     return (

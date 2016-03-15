@@ -24,7 +24,7 @@ class BallparkItem extends React.Component {
  render() {
    return(
       <Link className="ballparkLink" to={`/ballparks/${this.state.id}`}>
-       <li className="li-gr-item">
+       <li className="li-gr-item" id={this.props.classId}>
          {this.state.name}<span className="ballpark-rating">({this.state.average_rating})</span>
        </li>
        </Link>

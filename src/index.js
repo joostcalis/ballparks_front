@@ -5,11 +5,12 @@ import App from './App';
 import BallparkList from './BallparkList';
 import Ballpark from './Ballpark'
 import PageNotFound from './PageNotFound';
+import Dashboard from './Dashboard';
 
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={BallparkList} />
+      <IndexRoute component={Dashboard} />
       <Route path="/ballparks/:ballparkId" component={Ballpark}/>
       <Route path="*" component={PageNotFound}/>
     </Route>

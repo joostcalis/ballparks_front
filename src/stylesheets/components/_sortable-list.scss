@@ -1,0 +1,38 @@
+.sortable-margin {
+  margin-top: -20px;
+}
+
+.sortable-choice-margin {
+  margin-top: 20px;
+}
+
+.sortable-active {
+  padding-top: 20px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  text-align: center;
+  background-color: #F2F7FF;
+}
+
+.sortable-choice-inactive {
+  background-color: #F2F7FF;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.sortable-choice-active {
+  background-color: #F2F7FF;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.middle {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+span {
+  margin-left: 5px;
+}

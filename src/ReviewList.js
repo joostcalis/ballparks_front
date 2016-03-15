@@ -35,9 +35,8 @@ class ReviewList extends React.Component {
 
   render(){
     return(
-      <div className="r">
-        <div className="column-half">
-          <h2> Be the first to leave a review! </h2>
+      <div className="r review-list-margin">
+        <div className="c6">
           <div className="p-group" id="accordion">
             {this.state.reviews.map(function(review, i) {
               return (
@@ -46,7 +45,7 @@ class ReviewList extends React.Component {
             }, this)}
           </div>
         </div>
-        <div className="column-half">
+        <div className="c6">
           <ReviewForm onChange={this.displayReviews.bind(this)} ballparkId={this.props.ballparkId} />
         </div>
       </div>

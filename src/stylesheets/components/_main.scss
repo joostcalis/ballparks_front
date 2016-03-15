@@ -1,0 +1,44 @@
+.container-f {
+  @extend .container-fluid;
+}
+
+.r {
+  @extend .row;
+}
+
+.c1 {
+  @extend .col-md-1;
+}
+.c2 {
+  @extend .col-md-2;
+}
+.c3 {
+  @extend .col-md-3;
+}
+.c4 {
+  @extend .col-md-4;
+}
+.c5 {
+  @extend .col-md-5;
+}
+.c6 {
+  @extend .col-md-6;
+}
+.c7 {
+  @extend .col-md-7;
+}
+.c8 {
+  @extend .col-md-8;
+}
+.c9 {
+  @extend .col-md-9;
+}
+.c10 {
+  @extend .col-md-10;
+}
+.c11 {
+  @extend .col-md-11;
+}
+.c12 {
+  @extend .col-md-12;
+}
