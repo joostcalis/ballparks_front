@@ -37,6 +37,8 @@ class News extends React.Component {
  slider(counter){
    console.log(counter);
 
+   jQuery("newsfeed").fadeOut( "slow");
+
    let newslist = this.state.news;
    let counter1 = Number(counter);
 
@@ -70,7 +72,7 @@ class News extends React.Component {
    }
 
    return(
-     <li className = "navbar-feed">
+     <li id="newsfeed" className = "navbar-feed">
        <a href={newsItemLink} target="_blank">
         <strong>MLB news:</strong> {newsItem1}
       </a>

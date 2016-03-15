@@ -1,40 +1,7 @@
-.cont {
-  @extend .container-fluid;
-}
-
-.r {
-  @extend .row;
-}
-
-.r-header {
-@extend .row;
+.ballpark-header {
 border-bottom: 2px solid black;
 margin-bottom: 20px;
 vertical-align: middle;
-
-}
-
-.column1 {
-  @extend .col-md-4;
-
-
-
-}
-
-.column2 {
-  @extend .col-md-4;
-
-
-
-}
-
-.column3 {
-  @extend .col-md-4;
-
-}
-
-.column-half {
-  @extend .col-md-6;
 }
 
 .image-holder {

@@ -1,0 +1,57 @@
+.dashboard-margin {
+  margin-top: -20px;
+}
+
+.dashboard-active {
+  padding-top: 20px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  background-color: #F2F7FF;
+}
+
+.dashboard-inactive {
+  padding-top: 20px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  background-color: #F2F7FF;
+  opacity: 0.8;
+}
+
+.column2-dash-active {
+  @extend .col-md-4;
+  padding-top: 20px;
+  border-right: 0.3px solid black;
+  text-align: center;
+  background-color: #F2F7FF;
+}
+
+.column2-dash-inactive {
+  @extend .col-md-4;
+  padding-top: 20px;
+  border-right: 0.3px solid black;
+  border-bottom: 0.3px solid black;
+  text-align: center;
+  background-color: #F2F7FF;
+  opacity: 0.8;
+
+}
+
+.column3-dash {
+  @extend .col-md-4;
+  padding-top: 20px;
+  border-right: 0.3px solid black;
+  border-bottom: 0.3px solid black;
+  text-align: center;
+  background-color: #F2F7FF;
+  opacity: 0.8;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
+
+span {
+  margin-left: 5px;
+}

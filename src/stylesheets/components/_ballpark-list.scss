@@ -2,14 +2,9 @@
   @extend .container-fluid;
 }
 
-  // background-image: url(https://baseballnorthwest.com/wp-content/uploads/2016/01/stadium.jpg);
-// body {
-//   background-image: url(http://s8.postimg.org/oj2ta0pr9/stadium1.jpg);
-//   background-size: cover;
-// }
 
 body {
-  background-color: #dcdbed;
+  background-color: #eeeef6;
 }
 
 
@@ -19,31 +14,30 @@ body {
 
 }
 
-.column1 {
-  @extend .col-md-4;
+.al {
   margin-top: 3px;
-  // text-align: center;
-
-
+  background-color: #ec184b;
 }
 
-.column2 {
-  @extend .col-md-4;
+.nl {
   margin-top: 3px;
-  // text-align: center;
-
-
+  background-color: #004684;
 }
 
-.column3 {
-  @extend .col-md-4;
+.column-full {
+  @extend .col-md-12;
   margin-top: 3px;
-  // text-align: center;
+  text-align: center;
 
 
 }
 
 .li-gr {
+  @extend .list-group;
+
+
+}
+.li-gr-nl {
   @extend .list-group;
 
 
@@ -60,4 +54,10 @@ h2 {
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity 1s ease-in;
+}
+
+.league-logo {
+  height: 100px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }

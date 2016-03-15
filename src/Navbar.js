@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import News from './News';
+import './stylesheets/components.scss';
 
 class Navbar extends React.Component {
   constructor(){
@@ -10,7 +11,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="nav">
-        <div className="cont">
+        <div className="container-f">
           <div className="nav-header">
             <a className="nav-brand" href="#">Ballparks</a>
           </div>
