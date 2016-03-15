@@ -2,6 +2,10 @@
   @extend .container-fluid;
 }
 
+.container {
+  @extend .container;
+}
+
 .r {
   @extend .row;
 }

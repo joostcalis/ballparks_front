@@ -31,7 +31,7 @@ class BallparkList extends React.Component {
  render() {
    return (
      <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
-     <div className="cont1">
+     <div className="container">
       <div className="r">
         <div className="column-full">
         <img className="league-logo" src="http://s10.postimg.org/v9uele0c9/american_leage.png" />

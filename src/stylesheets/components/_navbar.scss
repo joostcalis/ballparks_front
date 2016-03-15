@@ -4,4 +4,36 @@
   @extend .navbar-right;
   border: none;
   width: 40%;
+  background-color: #004684;
+}
+
+.nav {
+  @extend .navbar;
+  @extend .navbar-inverse;
+}
+
+.nav-header {
+  @extend .navbar-header;
+}
+
+.nav-brand {
+  @extend .navbar-brand;
+}
+
+.nav1 {
+  @extend .nav;
+  @extend .navbar-nav;
+}
+
+.act {
+  @extend .active;
+}
+
+.navigation-main {
+  background: linear-gradient(10deg, #004684, #ec184b);
+  // box-shadow: 10px 10px 5px #888888;
+}
+
+.shadow {
+  text-shadow: 2px 2px 2px black;
 }

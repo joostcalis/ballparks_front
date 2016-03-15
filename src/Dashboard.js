@@ -5,6 +5,7 @@ import Loader from 'react-loader'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BallparkList from './BallparkList';
 import SortableList from './SortableList';
+import News from './News';
 
 class Dashboard extends React.Component {
  constructor() {
@@ -126,7 +127,7 @@ class Dashboard extends React.Component {
           </div>
           <div className="c4 dashboard-inactive cursor">
             <p>
-              <span>Choose your newsfeed</span>
+              <span><News /></span>
             </p>
           </div>
         </div>

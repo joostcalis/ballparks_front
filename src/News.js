@@ -72,11 +72,11 @@ class News extends React.Component {
    }
 
    return(
-     <li id="newsfeed" className = "navbar-feed">
+
        <a href={newsItemLink} target="_blank">
         <strong>MLB news:</strong> {newsItem1}
       </a>
-     </li>
+     
 
    );
  }

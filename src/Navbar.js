@@ -10,17 +10,14 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="nav">
+      <nav className="nav navigation-main">
         <div className="container-f">
           <div className="nav-header">
-            <a className="nav-brand" href="#">Ballparks</a>
-          </div>
-          <ul className="nav1">
-            <li className="act"><Link to="/">Home</Link></li>
-          </ul>
-          <ul className="nav-right">
-            <News />
-          </ul>
+          <Link className="nav-brand shadow" to="/">Ballparks</Link>
+            <Link className="nav-brand shadow" to="/">Home</Link>
+            </div>
+
+
         </div>
       </nav>
     );
