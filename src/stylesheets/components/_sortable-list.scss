@@ -36,3 +36,43 @@
 span {
   margin-left: 5px;
 }
+
+.sortable-card {
+  margin-top: 5%;
+  background-color: white;
+  padding-bottom: 2%;
+  border-radius: 10px;
+  box-shadow: inset 9px 9px 26px 2px rgba(0,70,132,1),inset -9px -9px 26px 2px rgba(236,24,75,1);
+}
+
+.sortable-button-active {
+  padding: 20px;
+	font-size: 1em;
+	line-height: 1.1em;
+	color: #ffffff;
+	margin-top: 30%;
+  margin-left: 10%;
+	border-radius: 10%;
+	height: 2em;
+	width: 10em;
+	position: relative;
+  background: white;
+  box-shadow: inset 0 0 1em #004684;
+  color: black;
+}
+
+.sortable-button-inactive {
+  padding: 20px;
+	font-size: 1em;
+	line-height: 1.1em;
+	color: #ffffff;
+	margin-top: 25%;
+  margin-left: 10%;
+	border-radius: 10%;
+	height: 2em;
+	width: 10em;
+	position: relative;
+  background: white;
+  box-shadow: inset 0 0 1em #004684;
+  color: black;
+}

@@ -85,32 +85,34 @@ class SortableList extends React.Component {
         <div className="r">
           <div className="c3">
           </div>
-          <div className="c6 sortable-active">
+          <div className="c6 sortable-card">
             <div className="container-f">
               <div className="r">
-                <div className={"c4 sortable-choice-" + (top10Class) + " cursor"} onClick={this.showingTop10.bind(this)}>
-                  Top 10 Rated
+                <div className="c4">
+                  <button className={"button sortable-button-" + (top10Class) + " cursor"} onClick={this.showingTop10.bind(this)} >Top 10 Rated
+                  </button>
                 </div>
-                <div className={"c4 sortable-choice-" + (bottom10Class) + " cursor middle"} onClick={this.showingBottom10.bind(this)}>
-                  Bottom 10 Rated
+                <div className="c4">
+                  <button className={"button sortable-button-" + (bottom10Class) + " cursor"} onClick={this.showingBottom10.bind(this)} >Bottom 10 Rated
+                  </button>
                 </div>
-                <div className={"c4 sortable-choice-" + (last10Class) + " cursor"} onClick={this.showingLast10.bind(this)}>
-                  Last Rated
+                <div className="c4">
+                  <button className={"button sortable-button-" + (last10Class) + " cursor"} onClick={this.showingLast10.bind(this)} >Latest 10 Rated
+                  </button>
                 </div>
               </div>
+                <div className="r">
+                  <div className="c12">
+                    {list}
+                  </div>
+                </div>
             </div>
           </div>
           <div className="c3">
           </div>
         </div>
       </div>
-      <div className="container-f">
-        <div className="r">
-          <div className="c12">
-            {list}
-          </div>
-        </div>
-      </div>
+
     </div>
    );
   }

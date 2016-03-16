@@ -49,13 +49,11 @@ class Bottom10 extends React.Component {
         </div>
          <div className="c6">
            <h2>Bottom 10</h2>
-             <div className="li-gr">
                {this.state.bottom10.map(function(ballpark, i) {
                  return(
                    <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
                  );
                }, this)}
-             </div>
          </div>
          <div className="c3">
          </div>
