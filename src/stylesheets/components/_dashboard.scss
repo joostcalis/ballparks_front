@@ -19,12 +19,14 @@
 	margin-top: 10%;
   margin-left: 10%;
 	border-radius: 10%;
-	height: 5em;
-	width: 18em;
+	height: 4em;
+	width: 20em;
 	position: relative;
   background: white;
-  box-shadow: inset 0 0 1em #004684;
+  box-shadow: inset 0px 0px 2px 1px rgba(0,70,132,1);
   color: black;
+  transition: all 100ms linear;
+  border: none;
 }
 
 .dashboard1-active {
@@ -36,12 +38,19 @@
 	margin-top: 10%;
   margin-left: 10%;
 	border-radius: 10%;
-	height: 10em;
+  height: 4em;
 	width: 20em;
 	position: relative;
   background: white;
-  box-shadow: inset 0 0 3em #004684;
+  box-shadow: inset 0px 0px 46px -7px rgba(0,70,132,1), 5px 5px 2px #888888;;
   color: black;
+  transition: all 200ms linear;;
+  border:none;
+
+}
+
+*:focus {
+    outline: 0 !important;
 }
 
 .dashboard-inactive {
@@ -50,7 +59,7 @@
   border-bottom: 1px solid black;
   text-align: center;
   background-color: #F2F7FF;
-  opacity: 0.8;
+  opacity: 0.1;
 }
 
 .cursor:hover {

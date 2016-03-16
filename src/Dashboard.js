@@ -117,12 +117,12 @@ class Dashboard extends React.Component {
         <div className="r">
           <div className="c4">
 
-              <button className={"button dashboard1-" + (class1) + " cursor"} onClick={this.showingAll.bind(this)}>All Ballparks</button>
+              <button className={"dashboard1-" + (class1) + " cursor"} onClick={this.showingAll.bind(this)}>All Ballparks</button>
 
           </div>
           <div className="c4" >
 
-              <button className={"button dashboard1-" + (class2) + " cursor"} onClick={this.showingSortable.bind(this)}>Sortable Lists</button>
+              <button className={"dashboard1-" + (class2) + " cursor"} onClick={this.showingSortable.bind(this)}>Sortable Lists</button>
 
           </div>
           <div className="c4 margin-dashboard">

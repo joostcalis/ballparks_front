@@ -4,13 +4,13 @@
 
 
 body {
-  background-color: #f2f3f3;
+  background-color: rgba(38, 13, 13, 0.1);
 }
 
 .al {
   margin-top: 3px;
   background-color: white;
-  box-shadow: 0px 0px 46px 15px rgba(236,24,75,0.75);
+  box-shadow: 0px 0px 25px 0px rgba(236,24,75,1);
   padding-bottom: 2%;
   border-radius: 10px;
 }
@@ -18,7 +18,7 @@ body {
 .nl {
   margin-top: 3px;
   background-color: white;
-  box-shadow: 0px 0px 46px 15px rgba(0,70,132,0.75);
+  box-shadow: 0px 0px 25px 0px rgba(0,70,132,0.75);
   padding-top: 2%;
   border-radius: 10px;
 }

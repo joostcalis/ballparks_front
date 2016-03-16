@@ -1,6 +1,7 @@
 import React from 'react';
 import Top10 from './Top10';
 import Bottom10 from './Bottom10';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class SortableList extends React.Component {
  constructor() {
@@ -85,6 +86,7 @@ class SortableList extends React.Component {
         <div className="r">
           <div className="c3">
           </div>
+          <ReactCSSTransitionGroup transitionName="moveRight" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
           <div className="c6 sortable-card">
             <div className="container-f">
               <div className="r">
@@ -108,6 +110,7 @@ class SortableList extends React.Component {
                 </div>
             </div>
           </div>
+          </ReactCSSTransitionGroup>
           <div className="c3">
           </div>
         </div>
