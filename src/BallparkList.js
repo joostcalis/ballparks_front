@@ -30,84 +30,100 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-     <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
-     <div className="cont1">
+     <ReactCSSTransitionGroup transitionName="moveLeft" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+     <div className="container-f">
       <div className="r">
-        <div className="column-full">
-        <img className="league-logo" src="http://s10.postimg.org/v9uele0c9/american_leage.png" />
-        </div>
+      <div className="c1">
       </div>
-      <div className="r">
-        <div className="c4 al">
-          <h2> West </h2>
-            <div className="li-gr">
-          {this.state.al_west.map(function(ballpark, i) {
-            return(
-              <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
-            );
-          }, this)}
+      <div className="">
+        <div className="c4">
+            <div className="r ballpark-list-card">
+
+              <div className="c12">
+                <img className="league-logo" src="http://s10.postimg.org/v9uele0c9/american_leage.png" />
+              </div>
+              <div className="c12 al">
+              <h2> West </h2>
+                <div className="li-gr">
+              {this.state.al_west.map(function(ballpark, i) {
+                return(
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+                );
+              }, this)}
+                </div>
+              </div>
+
+              <div className="c12 al">
+              <h2> Central </h2>
+                <div className="li-gr">
+              {this.state.al_central.map(function(ballpark, i) {
+                return(
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+                );
+              }, this)}
+                </div>
+              </div>
+
+
+              <div className="c12 al">
+              <h2> East </h2>
+                <div className="li-gr">
+              {this.state.al_east.map(function(ballpark, i) {
+                return(
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
+                );
+              }, this)}
+                </div>
+              </div>
+
           </div>
         </div>
-        <div className="c4 al">
-          <h2> Central </h2>
-            <div className="li-gr">
-          {this.state.al_central.map(function(ballpark, i) {
-            return(
-              <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
-            );
-          }, this)}
-          </div>
-        </div>
-        <div className="c4 al">
-          <h2> East </h2>
-            <div className="li-gr">
-          {this.state.al_east.map(function(ballpark, i) {
-            return(
-              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} />
-            );
-          }, this)}
-          </div>
-        </div>
-      </div>
-      <div className="r">
-        <div className="column-full">
-        <img className="league-logo" src="http://s18.postimg.org/5m0u366qh/nl_logo1.png" />
-        </div>
-      </div>
-      <div className="r">
-        <div className="c4 nl">
-          <h2> West </h2>
-            <div className="li-gr-nl">
-          {this.state.nl_west.map(function(ballpark, i) {
-            return(
-              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} classId= "nl" />
-            );
-          }, this)}
+          <div className="c4 offset-2">
+            <div className="r">
+              <div className="c12">
+              <img className="league-logo" src="http://s18.postimg.org/5m0u366qh/nl_logo1.png" />
+              </div>
+              <div className="c12 nl">
+              <h2> West </h2>
+                <div className="li-gr">
+              {this.state.nl_west.map(function(ballpark, i) {
+                return(
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} classId= "nl" />
+                );
+              }, this)}
+                </div>
+              </div>
+
+
+              <div className="c12 nl">
+              <h2> Central </h2>
+                <div className="li-gr">
+              {this.state.nl_central.map(function(ballpark, i) {
+                return(
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} classId= "nl" />
+                );
+              }, this)}
+                </div>
+              </div>
+              <div className="c12 nl">
+              <h2> East </h2>
+                <div className="li-gr">
+              {this.state.nl_east.map(function(ballpark, i) {
+                return(
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} classId= "nl" />
+                );
+              }, this)}
+                </div>
+              </div>
             </div>
-        </div>
-        <div className="c4 nl">
-          <h2> Central </h2>
-            <div className="li-gr-nl">
-          {this.state.nl_central.map(function(ballpark, i) {
-            return(
-              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} classId= "nl" />
-            );
-          }, this)}
           </div>
+
         </div>
-        <div className="c4 nl">
-          <h2> East </h2>
-            <div className="li-gr-nl">
-          {this.state.nl_east.map(function(ballpark, i) {
-            return(
-              <BallparkItem key={ballpark.id} id={ballpark.id} league={ballpark.league} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} classId= "nl" />
-            );
-          }, this)}
-          </div>
+        <div className="c1">
         </div>
       </div>
     </div>
-    </ReactCSSTransitionGroup>
+  </ReactCSSTransitionGroup>
     );
   }
 }

@@ -8,3 +8,7 @@ float: right;
   @extend .navbar-nav;
   @extend .navbar-right;
 }
+
+.newslink:hover {
+  text-decoration: none; 
+}

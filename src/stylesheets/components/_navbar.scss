@@ -3,5 +3,40 @@
   @extend .navbar-nav;
   @extend .navbar-right;
   border: none;
-  width: 40%;
+  width: 50%;
+}
+
+.nav {
+  @extend .navbar;
+  @extend .navbar-inverse;
+}
+
+.nav-header {
+  @extend .navbar-header;
+}
+
+.nav-brand {
+  @extend .navbar-brand;
+}
+
+.nav1 {
+  @extend .nav;
+  @extend .navbar-nav;
+}
+
+.act {
+  @extend .active;
+}
+
+.navigation-main {
+  background: rgba(255,255,255, 0.0);
+}
+
+.shadow {
+  text-shadow: 2px 2px 2px black;
+}
+
+.newsholder {
+  margin-top: 1%;
+  margin-left: 35%;
 }

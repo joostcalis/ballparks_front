@@ -39,7 +39,7 @@ class Ballpark extends React.Component {
 
  render() {
    return(
-     <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
+     <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500}>
        <div className="container-f">
         <Loader loaded={this.state.loaded} color="#1a75ff">
         <div className="r ballpark-header">

@@ -5,6 +5,8 @@ import Loader from 'react-loader'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BallparkList from './BallparkList';
 import SortableList from './SortableList';
+import SearchForm from './SearchForm';
+import News from './News';
 
 class Dashboard extends React.Component {
  constructor() {
@@ -13,6 +15,7 @@ class Dashboard extends React.Component {
    this.state = {
      showAll: true,
      showSortable: false,
+     showSearch: false,
      loaded: false,
      al_west: [],
      al_central: [],
@@ -68,14 +71,23 @@ class Dashboard extends React.Component {
  showingAll(){
    this.setState({
     showAll: true,
-    showSortable: false
+    showSortable: false,
+    showSearch: false
    });
  }
 
  showingSortable(){
    this.setState({
     showSortable: true,
-    showAll: false
+    showAll: false,
+    showSearch: false
+   });
+ }
+ showingSearch(){
+   this.setState({
+    showSortable: false,
+    showAll: false,
+    showSearch: true
    });
  }
 
@@ -86,6 +98,9 @@ class Dashboard extends React.Component {
    }
    else if (this.state.showSortable) {
      show = <SortableList mlb={this.state.mlb}/>
+   }
+   else if (this.state.showSearch) {
+     show = <SearchForm mlb={this.state.mlb}/>
    }
    else {
      show = ""
@@ -113,21 +128,22 @@ class Dashboard extends React.Component {
      <div>
      <Loader loaded={this.state.loaded} color="#1a75ff">
       <div className="container-f dashboard-margin">
-        <div className="r">
-          <div className={"c4 dashboard-" + (class1) + " cursor"} onClick={this.showingAll.bind(this)}>
-            <p>
-              <span>Show All Ballparks</span>
-            </p>
+        <div className="r dashboard-card">
+          <div className="c3">
+
+              <button className={"dashboard1-" + (class1) + " cursor"} onClick={this.showingAll.bind(this)}>All Ballparks</button>
+
           </div>
-          <div className={"c4 dashboard-" + (class2) + " cursor"} onClick={this.showingSortable.bind(this)}>
-            <p>
-              <span>Sortable Lists</span>
-            </p>
+
+          <div className="c3" >
+
+              <button className={"dashboard1-" + (class2) + " cursor"} onClick={this.showingSortable.bind(this)}>Sortable Lists</button>
+
           </div>
-          <div className="c4 dashboard-inactive cursor">
-            <p>
-              <span>Choose your newsfeed</span>
-            </p>
+          <div className="c3">
+          <button className={"dashboard1-" + (class1) + " cursor"} onClick={this.showingSearch.bind(this)}>Search a Ballpark</button>
+          </div>
+          <div className="c3 margin-dashboard">
           </div>
         </div>
       </div>

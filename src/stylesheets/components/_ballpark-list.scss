@@ -4,24 +4,25 @@
 
 
 body {
-  background-color: #eeeef6;
-}
-
-
-
-.r {
-  @extend .row;
-
+  background-color: rgba(38, 13, 13, 0.1);
 }
 
 .al {
-  margin-top: 3px;
-  background-color: #ec184b;
+  background-color: white;
+  box-shadow: 0px 0px 25px 0px rgba(236,24,75,1);
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
 }
 
 .nl {
-  margin-top: 3px;
-  background-color: #004684;
+  background-color: white;
+  box-shadow: 0px 0px 25px 0px rgba(0,70,132,0.75);
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
 }
 
 .column-full {
@@ -47,6 +48,11 @@ h2 {
   text-align: center;
 }
 
+.league-card {
+
+  background-color: white;
+}
+
 .example-appear {
   opacity: 0.01;
 }
@@ -58,6 +64,12 @@ h2 {
 
 .league-logo {
   height: 100px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  @extend .img-responsive ;
+  @extend .center-block;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.ballpark-list-card {
+
 }
