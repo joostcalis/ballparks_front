@@ -30,7 +30,7 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-     <ReactCSSTransitionGroup transitionName="moveLeft" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+     <ReactCSSTransitionGroup transitionName="moveRight" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
      <div className="container-f">
       <div className="r">
       <div className="c1">

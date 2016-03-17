@@ -10,5 +10,10 @@ float: right;
 }
 
 .newslink:hover {
-  text-decoration: none; 
+  text-decoration: none;
+  color: inherit;
+}
+
+.newslink {
+  font-size: 1.4em;
 }

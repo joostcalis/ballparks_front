@@ -121,6 +121,13 @@ class Dashboard extends React.Component {
    else {
      class2 ="inactive"
    }
+   var class3;
+   if (this.state.showSearch) {
+     class3 = "active"
+   }
+   else {
+     class3 ="inactive"
+   }
 
 
    return (
@@ -129,21 +136,19 @@ class Dashboard extends React.Component {
      <Loader loaded={this.state.loaded} color="#1a75ff">
       <div className="container-f dashboard-margin">
         <div className="r dashboard-card">
-          <div className="c3">
+          <div className="c4">
 
               <button className={"dashboard1-" + (class1) + " cursor"} onClick={this.showingAll.bind(this)}>All Ballparks</button>
 
           </div>
 
-          <div className="c3" >
+          <div className="c4" >
 
               <button className={"dashboard1-" + (class2) + " cursor"} onClick={this.showingSortable.bind(this)}>Sortable Lists</button>
 
           </div>
-          <div className="c3">
-          <button className={"dashboard1-" + (class1) + " cursor"} onClick={this.showingSearch.bind(this)}>Search a Ballpark</button>
-          </div>
-          <div className="c3 margin-dashboard">
+          <div className="c4">
+          <button className={"dashboard1-" + (class3) + " cursor"} onClick={this.showingSearch.bind(this)}>Search a Ballpark</button>
           </div>
         </div>
       </div>
