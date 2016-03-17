@@ -16,6 +16,10 @@ class Navbar extends React.Component {
           <Link className="nav-brand shadow" to="/">Ballparks</Link>
             <Link className="nav-brand shadow" to="/">Home</Link>
             </div>
+          <li className="newsholder">
+            <News />
+          </li>
+
 
 
         </div>

@@ -73,10 +73,11 @@ class News extends React.Component {
 
    return(
 
-       <a href={newsItemLink} target="_blank">
+       <a href={newsItemLink} target="_blank" className="newslink">
         <strong>MLB news:</strong> {newsItem1}
       </a>
-     
+    
+
 
    );
  }

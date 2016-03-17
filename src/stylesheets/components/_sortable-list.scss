@@ -39,10 +39,9 @@ span {
 
 .sortable-card {
   margin-top: 5%;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.3);
   padding-bottom: 2%;
-  border-radius: 3%;
-  box-shadow: inset 9px 9px 5px -5px rgba(0,70,132,1),inset -9px -9px 5px -5px rgba(236,24,75,1),10px 10px 5px #888888;
+  box-shadow: inset 0px 0px 1px 3px rgba(0,70,132,1),5px 5px 5px #888888;
   margin-bottom: 5%;
 
 }
@@ -54,7 +53,6 @@ span {
 	color: #ffffff;
 	margin-top: 30%;
   margin-left: 10%;
-	border-radius: 10%;
 	height: 2em;
 	width: 10em;
 	position: relative;
@@ -70,7 +68,6 @@ span {
 	color: #ffffff;
 	margin-top: 25%;
   margin-left: 10%;
-	border-radius: 10%;
 	height: 2em;
 	width: 10em;
 	position: relative;

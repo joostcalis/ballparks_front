@@ -3,8 +3,7 @@
   @extend .navbar-nav;
   @extend .navbar-right;
   border: none;
-  width: 40%;
-  background-color: #004684;
+  width: 50%;
 }
 
 .nav {
@@ -30,32 +29,14 @@
 }
 
 .navigation-main {
-  background: linear-gradient(10deg, white -10%, #004684, #ec184b, white 120%);
-  // box-shadow: 10px 10px 5px #888888;
-//   background: linear-gradient(316deg, #004684 20%, #ec184b 80%);
-// background-size: 400% 400%;
-//
-// -webkit-animation: AnimationName 34s ease infinite;
-// -moz-animation: AnimationName 34s ease infinite;
-// animation: AnimationName 34s ease infinite;
-//
-// @-webkit-keyframes AnimationName {
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-// }
-// @-moz-keyframes AnimationName {
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-// }
-// @keyframes AnimationName {
-//     0%{background-position:0% 82%}
-//     50%{background-position:100% 19%}
-//     100%{background-position:0% 82%}
-// }
+  background: rgba(255,255,255, 0.0);
 }
 
 .shadow {
   text-shadow: 2px 2px 2px black;
+}
+
+.newsholder {
+  margin-top: 1%;
+  margin-left: 35%;
 }
