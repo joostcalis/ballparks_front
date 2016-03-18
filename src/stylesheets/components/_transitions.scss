@@ -50,13 +50,17 @@
 //   transition-timing-function: ease-out;
 // }
 
-.fade-enter {
-  opacity: 0.01;
+.fade-appear {
+  opacity: 0.1;
+  height: inherit;
+  width: inherit;
 }
 
-.fade-enter.fade-enter-active {
+.fade-appear.fade-appear-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 1s ease-in-out;
+  height: inherit;
+  width: inherit;
 }
 
 // .fade-leave {

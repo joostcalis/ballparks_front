@@ -1,26 +1,47 @@
 .welcome {
-  background-image: url(http://s13.postimg.org/k98qay9l3/stadium2.jpg);
   background-size: cover;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid black;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
 }
 
 .welcome1 {
   color: black;
-  font-size: 150%;
-  text-align: center;
-  text-shadow: 4px 4px 8px black;
+  text-shadow: 1px 1px 4px black;
+  margin-top: 3%;
+  margin-left: 7%;
+  font-family: 'Amatic SC', cursive,;
+  font-weight: 700;
 }
 
-.welcome1 >h1 {
-  color: white;
-   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: black;
-  font-size: 350%;
-  font-family: "Architects Daughter";
-  text-shadow: 4px 4px 4px black;
+.welcome1-hidden {
+  color: black;
+  text-shadow: 1px 1px 4px black;
+  margin-top: 10%;
+
+  font-family: 'Amatic SC', cursive,;
+  font-weight: 700;
+  opacity: 0;
+  text-align: center;
+  transition: all 800ms linear;
+
 }
+
+.welcome1-fadein {
+  color: black;
+  text-shadow: 1px 1px 4px black;
+  margin-top: 10%;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  text-align: center;
+  transition: all 800ms linear;
+}
+
+// .welcome1 >h1 {
+//   // color: white;
+//   //  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+//   //  -webkit-text-stroke-width: 1px;
+//   //  -webkit-text-stroke-color: black;
+//   // text-shadow: 4px 4px 4px black;
+// }

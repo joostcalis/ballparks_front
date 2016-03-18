@@ -1,6 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import BallparkItem from './BallparkItem';
+import Loader from 'react-loader'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class BallparkList extends React.Component {
@@ -30,12 +31,13 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-     <ReactCSSTransitionGroup transitionName="moveRight" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+     
      <div className="container-f">
       <div className="r">
       <div className="c1">
       </div>
-      <div className="">
+      <div className="r">
+      <ReactCSSTransitionGroup transitionName="moveRight" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
         <div className="c4">
             <div className="r ballpark-list-card">
 
@@ -78,6 +80,8 @@ class BallparkList extends React.Component {
 
           </div>
         </div>
+        </ReactCSSTransitionGroup>
+        <ReactCSSTransitionGroup transitionName="moveLeft" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
           <div className="c4 offset-2">
             <div className="r">
               <div className="c12">
@@ -117,13 +121,13 @@ class BallparkList extends React.Component {
               </div>
             </div>
           </div>
-
+          </ReactCSSTransitionGroup>
         </div>
         <div className="c1">
         </div>
       </div>
     </div>
-  </ReactCSSTransitionGroup>
+
     );
   }
 }

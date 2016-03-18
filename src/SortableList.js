@@ -81,6 +81,7 @@ class SortableList extends React.Component {
      var last10Class ="inactive"
    }
    return (
+     
      <div>
       <div className="container-f">
         <div className="r">

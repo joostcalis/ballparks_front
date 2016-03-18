@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
    super();
 
    this.state = {
-     showAll: true,
+     showAll: false,
      showSortable: false,
      showSearch: false,
      loaded: false,
@@ -131,9 +131,9 @@ class Dashboard extends React.Component {
 
 
    return (
-
+     <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
      <div>
-     <Loader loaded={this.state.loaded} color="#1a75ff">
+
       <div className="container-f dashboard-margin">
         <div className="r dashboard-card">
           <div className="c4">
@@ -155,8 +155,9 @@ class Dashboard extends React.Component {
       <div>
         {show}
       </div>
-      </Loader>
+
     </div>
+    </ReactCSSTransitionGroup>
 
    );
   }

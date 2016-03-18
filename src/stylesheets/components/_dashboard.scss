@@ -17,7 +17,7 @@
 	line-height: 1.1em;
 	color: #ffffff;
 	margin-top: 10%;
-  margin-left: 10%;
+  @extend .center-block;
 	height: 4em;
 	width: 20em;
 	position: relative;
@@ -35,7 +35,7 @@
 	line-height: 1.1em;
 	color: #ffffff;
 	margin-top: 10%;
-  margin-left: 10%;
+  @extend .center-block;
   height: 4em;
 	width: 20em;
 	position: relative;
@@ -78,11 +78,12 @@ span {
 }
 
 .dashboard-card {
-  margin-top: 5%;
-  background:rgba(255,255,255, 0.3);
+  margin-top: 2%;
+  background:rgba(255,255,255, 0.2);
   padding-bottom: 2%;
   box-shadow: 5px 5px 3px #888888;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   margin-left: 2%;
   margin-right: 2%;
+  border-radius: 8px;
 }

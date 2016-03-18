@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import News from './News';
 import './stylesheets/components.scss';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Navbar extends React.Component {
   constructor(){
@@ -10,6 +11,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
+      <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
       <nav className="nav navigation-main">
         <div className="container-f">
           <div className="nav-header">
@@ -24,6 +26,7 @@ class Navbar extends React.Component {
 
         </div>
       </nav>
+      </ReactCSSTransitionGroup>
     );
   }
 }
