@@ -34,7 +34,7 @@ class SearchForm extends React.Component {
       console.log(mlb);
     }
    return (
-     
+
      <div className="container-f">
       <div className="r">
         <div className="c3">
@@ -44,7 +44,7 @@ class SearchForm extends React.Component {
         <div className="r">
 
         <div className="c12">
-     <SearchInput className="search-input" ref='search' onChange={this.searchUpdated.bind(this)} />
+     <SearchInput className="search-input" ref='search' placeholder='enter name, city or team' onChange={this.searchUpdated.bind(this)} />
         </div>
         </div>
         <div className="r">

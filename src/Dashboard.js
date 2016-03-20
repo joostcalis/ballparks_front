@@ -23,7 +23,8 @@ class Dashboard extends React.Component {
      nl_west: [],
      nl_central: [],
      nl_east: [],
-     mlb: []
+     mlb: [],
+     latest10Reviews: []
    };
  }
 
@@ -44,6 +45,7 @@ class Dashboard extends React.Component {
         nl_west: data.nl_west,
         nl_central: data.nl_central,
         nl_east: data.nl_east,
+        latest10Reviews: data.reviews
       });
       component.completeList();
    }
@@ -97,7 +99,7 @@ class Dashboard extends React.Component {
      show = <BallparkList al_west={this.state.al_west} al_central={this.state.al_central} al_east={this.state.al_east} nl_west={this.state.nl_west} nl_central={this.state.nl_central} nl_east={this.state.nl_east} />
    }
    else if (this.state.showSortable) {
-     show = <SortableList mlb={this.state.mlb}/>
+     show = <SortableList latest10={this.state.latest10Reviews} mlb={this.state.mlb}/>
    }
    else if (this.state.showSearch) {
      show = <SearchForm mlb={this.state.mlb}/>

@@ -16,7 +16,7 @@ class Welcome extends React.Component {
 
   initiate() {
     console.log("i live in initiate")
-    setTimeout(this.showContent.bind(this), 3000);
+    setTimeout(this.showContent.bind(this), 2000);
 
   }
 

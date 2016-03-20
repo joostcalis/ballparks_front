@@ -1,6 +1,7 @@
 import React from 'react';
 import Top10 from './Top10';
 import Bottom10 from './Bottom10';
+import Latest10 from './Latest10';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class SortableList extends React.Component {
@@ -8,6 +9,7 @@ class SortableList extends React.Component {
    super();
 
    this.state = {
+     latest10: [],
      mlb: [],
      showTop10: false,
      showLast10: false,
@@ -17,7 +19,8 @@ class SortableList extends React.Component {
 
  componentDidMount() {
    this.setState({
-     mlb: this.props.mlb
+     mlb: this.props.mlb,
+     latest10: this.props.latest10
    });
  }
 
@@ -54,7 +57,7 @@ class SortableList extends React.Component {
      list = <Bottom10 mlb={this.state.mlb} />
    }
    else if (this.state.showLast10) {
-     list = "Last 10"
+     list = <Latest10 latest10={this.state.latest10} />
    }
    else {
      list = ""
@@ -81,7 +84,7 @@ class SortableList extends React.Component {
      var last10Class ="inactive"
    }
    return (
-     
+
      <div>
       <div className="container-f">
         <div className="r">
