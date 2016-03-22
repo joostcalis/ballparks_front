@@ -55,6 +55,10 @@
   @extend .col-md-offset-2;
 }
 
+.justify {
+  @extend .text-justify;
+}
+
 html {
   background: url(http://clampart.com/wp-content/uploads/2012/11/Wilkes-Field-of-Dreams-2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;

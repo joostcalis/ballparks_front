@@ -95,15 +95,15 @@ class SortableList extends React.Component {
             <div className="container-f">
               <div className="r">
                 <div className="c4">
-                  <button className={"button sortable-button-" + (top10Class) + " cursor"} onClick={this.showingTop10.bind(this)} >Top 10 Rated
+                  <button className="sortable-button" onClick={this.showingTop10.bind(this)} >Top 10 Rated
                   </button>
                 </div>
                 <div className="c4">
-                  <button className={"button sortable-button-" + (bottom10Class) + " cursor"} onClick={this.showingBottom10.bind(this)} >Bottom 10 Rated
+                  <button className="sortable-button" onClick={this.showingBottom10.bind(this)} >Bottom 10 Rated
                   </button>
                 </div>
                 <div className="c4">
-                  <button className={"button sortable-button-" + (last10Class) + " cursor"} onClick={this.showingLast10.bind(this)} >Latest 10 Rated
+                  <button className="sortable-button" onClick={this.showingLast10.bind(this)} >Latest 10 Rated
                   </button>
                 </div>
               </div>

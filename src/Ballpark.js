@@ -39,31 +39,41 @@ class Ballpark extends React.Component {
 
  render() {
    return(
-     <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500}>
-       <div className="container-f">
-        <Loader loaded={this.state.loaded} color="#1a75ff">
-        <div className="r ballpark-header">
-          <div className="c4">
-            <h2>{this.state.ballpark.league}</h2>
+      <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+
+      <div>
+      <Loader loaded={this.state.loaded} color="#1a75ff">
+
+       <div className="container ballpark-card">
+
+          <div className="r">
+            <div className="c12 margin-ballpark">
+              <h1>Welcome to {this.state.ballpark.name}</h1>
+            </div>
           </div>
-          <div className="c4">
-            <h1>{this.state.ballpark.name} ({this.state.average_rating})</h1>
-          </div>
-          <div className="c4">
-            <h2>{this.state.ballpark.team}</h2>
-          </div>
-        </div>
-        <div className="r">
-          <div className="c6">
-            <p>{this.state.ballpark.description}</p>
-          </div>
-          <div className="c6">
+          <div className="r">
+            <div className="c6 ballpark-content">
             <img src="http://sabrtoothedtigers.files.wordpress.com/2013/06/pnc-park-1280.jpg" className="image-holder"></img>
+              <p className="justify"><strong>League: {this.state.ballpark.league}</strong></p>
+              <p className="justify"><strong>Team: {this.state.ballpark.team}</strong></p>
+              <p className="justify"><strong>Rating: {this.state.average_rating}</strong></p>
+
+              <p className="justify"><strong>{this.state.ballpark.description}</strong></p>
+            </div>
+            <div className="c6">
+            </div>
           </div>
-        </div>
+          </div>
+
+          <div className="container-f">
+
+
           <ReviewList onChange={this.getBallpark.bind(this)} ballparkId={this.props.params.ballparkId} />
+
+          </div>
           </Loader>
       </div>
+
     </ReactCSSTransitionGroup>
    );
  }

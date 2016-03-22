@@ -5,10 +5,37 @@ vertical-align: middle;
 }
 
 .image-holder {
+  margin-left: 5%;
+
+  margin-bottom: 8%;
   @extend .pull-right;
   @extend .img-rounded;
   height: 60%;
   width: 60%;
+  padding: 1%;
+  background-color: black;
+}
+
+.margin-ballpark {
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.ballpark-card {
+  background-color: rgba(255,255,255, 0.3);
+  padding-bottom: 2%;
+  border-radius: 8px;
+  margin-bottom: 5%;
+
+}
+
+.ballpark-content {
+  background-color: rgba(255,255,255, 1);
+  padding: 4%;
+  border-radius: 8px;
+  margin-bottom: 5%;
+  margin-left: 2%;
+
 }
 
 .example-appear {
