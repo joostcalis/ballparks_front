@@ -96,7 +96,7 @@ class Dashboard extends React.Component {
  render() {
    var show;
    if (this.state.showAll) {
-     show = <BallparkList al_west={this.state.al_west} al_central={this.state.al_central} al_east={this.state.al_east} nl_west={this.state.nl_west} nl_central={this.state.nl_central} nl_east={this.state.nl_east} />
+     show = <BallparkList al_west={this.state.al_west} al_central={this.state.al_central} al_east={this.state.al_east} nl_west={this.state.nl_west} nl_central={this.state.nl_central} nl_east={this.state.nl_east} loaded={this.state.loaded} />
    }
    else if (this.state.showSortable) {
      show = <SortableList latest10={this.state.latest10Reviews} mlb={this.state.mlb}/>
@@ -133,6 +133,7 @@ class Dashboard extends React.Component {
 
 
    return (
+     <Loader loaded={this.state.loaded} color="#1a75ff">
      <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
      <div>
 
@@ -160,6 +161,7 @@ class Dashboard extends React.Component {
 
     </div>
     </ReactCSSTransitionGroup>
+    </Loader>
 
    );
   }

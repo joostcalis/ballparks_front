@@ -39,7 +39,7 @@ class Welcome extends React.Component {
     return (
       <div className="welcome cursor" onClick={this.props.continue}>
         <div className="welcome1">
-          <h1 > If you build it, they will come...</h1>
+          <blockquote className="quote" > <h2> If you build it, they will come...</h2></blockquote>
         </div>
         <div className={"welcome1-" + (class1)}>
         <h1>Welcome to Ballparks</h1>

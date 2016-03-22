@@ -7,7 +7,7 @@ vertical-align: middle;
 .image-holder {
   margin-left: 5%;
 
-  margin-bottom: 8%;
+  margin-bottom: 5%;
   @extend .pull-right;
   @extend .img-rounded;
   height: 60%;
@@ -17,9 +17,23 @@ vertical-align: middle;
 }
 
 .margin-ballpark {
-  margin-bottom: 3%;
+  margin-bottom: -2%;
   text-align: center;
+  background-color: rgba(255,255,255, 1);
+  border-radius: 8px;
+  margin-left: 2%;
+  margin-top: 3%;
+  position: relative;
+  z-index: 5;
+  vertical-align: top;
+
 }
+
+.lineheight {
+  line-height: 100%;
+}
+
+
 
 .ballpark-card {
   background-color: rgba(255,255,255, 0.3);

@@ -31,13 +31,14 @@ class BallparkList extends React.Component {
 
  render() {
    return (
-     
+
      <div className="container-f">
       <div className="r">
       <div className="c1">
       </div>
       <div className="r">
       <ReactCSSTransitionGroup transitionName="moveRight" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+
         <div className="c4">
             <div className="r ballpark-list-card">
 
@@ -121,7 +122,9 @@ class BallparkList extends React.Component {
               </div>
             </div>
           </div>
+
           </ReactCSSTransitionGroup>
+
         </div>
         <div className="c1">
         </div>

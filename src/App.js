@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import './stylesheets/components.scss';
 import Welcome from './Welcome';
 import Dashboard from './Dashboard';
+import Test from './test';
 
 class App extends React.Component {
   constructor(){

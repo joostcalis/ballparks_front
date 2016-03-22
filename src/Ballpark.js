@@ -47,20 +47,22 @@ class Ballpark extends React.Component {
        <div className="container ballpark-card">
 
           <div className="r">
-            <div className="c12 margin-ballpark">
-              <h1>Welcome to {this.state.ballpark.name}</h1>
+            <div className="c2 margin-ballpark">
+              <h4><strong>{this.state.ballpark.name}</strong></h4>
+            </div>
+            <div className="c10">
             </div>
           </div>
           <div className="r">
-            <div className="c6 ballpark-content">
+            <div className="c7 ballpark-content">
             <img src="http://sabrtoothedtigers.files.wordpress.com/2013/06/pnc-park-1280.jpg" className="image-holder"></img>
-              <p className="justify"><strong>League: {this.state.ballpark.league}</strong></p>
-              <p className="justify"><strong>Team: {this.state.ballpark.team}</strong></p>
-              <p className="justify"><strong>Rating: {this.state.average_rating}</strong></p>
+              <p className="justify"><strong>League:</strong> {this.state.ballpark.league}</p>
+              <p className="justify"><strong>Team:</strong> {this.state.ballpark.team}</p>
+              <p className="justify"><strong>Rating:</strong> {this.state.average_rating}</p>
 
-              <p className="justify"><strong>{this.state.ballpark.description}</strong></p>
+              <p className="justify">{this.state.ballpark.description}</p>
             </div>
-            <div className="c6">
+            <div className="c5">
             </div>
           </div>
           </div>
