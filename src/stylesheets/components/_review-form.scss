@@ -38,8 +38,10 @@
 }
 
 .form-card {
-  background:rgba(255,255,255, 0.2);
+  background:rgba(255,255,255, 1);
   border-radius: 8px;
+  min-height: 120%;
+  padding-bottom: 4%;
 }
 
 .review-form-center {

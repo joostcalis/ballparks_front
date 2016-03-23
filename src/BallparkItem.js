@@ -17,7 +17,8 @@ class BallparkItem extends React.Component {
    this.setState({
      id: this.props.id,
      name: this.props.name,
-     average_rating: this.props.average_rating
+     average_rating: this.props.average_rating,
+     logo: this.props.logo
    });
  }
 

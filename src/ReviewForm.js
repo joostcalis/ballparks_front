@@ -57,7 +57,7 @@ class ReviewForm extends React.Component {
           <div className="container-f form-card">
             <div className="r">
               <div className="c12 review-form-center">
-                <h3> Visited this ballpark? Leave a Review! </h3>
+                <h3>Leave a Review! </h3>
               </div>
               </div>
                 <div className="r form-row">
@@ -71,9 +71,9 @@ class ReviewForm extends React.Component {
                   </div>
                 </div>
                 <div className="r form-row">
-                  <div className="c3">
+                  <div className="c1">
                   </div>
-                  <div className="c2">
+                  <div className="c3">
                     <div className="f-group">
                       <div className="small-form first-small-form">
                         <p><label>General:</label></p>
@@ -87,7 +87,7 @@ class ReviewForm extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="c2">
+                  <div className="c3">
                     <div className="f-group">
                       <div className="small-form selector">
                         <p><label>Food:</label></p>
@@ -101,7 +101,7 @@ class ReviewForm extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="c2">
+                  <div className="c3">
                     <div className="f-group">
                       <div className="small-form selector">
                         <p><label>Extra:</label></p>
@@ -115,7 +115,7 @@ class ReviewForm extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="c3">
+                  <div className="c1">
                   </div>
                 </div>
                 <div className="r form-row">

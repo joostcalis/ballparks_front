@@ -1,6 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import ReviewList from './ReviewList';
+import ReviewForm from './ReviewForm';
 import model from "./Model";
 import Loader from "react-loader";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -12,7 +13,8 @@ class Ballpark extends React.Component {
      ballpark: {},
      average_rating: "",
      reviews: [],
-     loaded: false
+     loaded: false,
+     rerender: false
    };
  }
 
@@ -29,6 +31,7 @@ class Ballpark extends React.Component {
      component.setState({
        ballpark: data.ballpark,
        average_rating: data.average_rating,
+       reviews: data.reviews,
        loaded: true
      });
    }
@@ -37,15 +40,39 @@ class Ballpark extends React.Component {
 
  }
 
+ displayReviews() {
+   let component = this;
+   let ballparkId = this.props.params.ballparkId;
+
+   function onDone(data) {
+      console.log("loading reviews attached to ballpark");
+
+      component.setState({
+         reviews: data.reviews
+      });
+
+   }
+
+   model.ballparkReviews.index( onDone, ballparkId );
+ }
+
  render() {
    return(
-      <ReactCSSTransitionGroup transitionName="fade" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+
 
       <div>
       <Loader loaded={this.state.loaded} color="#1a75ff">
-
+      <ReactCSSTransitionGroup transitionName="moveRight" transitionAppear={true} transitionAppearTimeout={500} transitionLeave={true} transitionLeaveTimeout={500}>
+      <div className="container">
+         <div className="r">
+           <div className="c10">
+           </div>
+           <div className="c2">
+           <img src={this.state.ballpark.team_logo} className="teamlogo" />
+           </div>
+         </div>
+       </div>
        <div className="container ballpark-card">
-
           <div className="r">
             <div className="c2 margin-ballpark">
               <h4><strong>{this.state.ballpark.name}</strong></h4>
@@ -55,14 +82,16 @@ class Ballpark extends React.Component {
           </div>
           <div className="r">
             <div className="c7 ballpark-content">
-            <img src="http://sabrtoothedtigers.files.wordpress.com/2013/06/pnc-park-1280.jpg" className="image-holder"></img>
+            <img src={this.state.ballpark.image} className="image-holder"></img>
               <p className="justify"><strong>League:</strong> {this.state.ballpark.league}</p>
               <p className="justify"><strong>Team:</strong> {this.state.ballpark.team}</p>
               <p className="justify"><strong>Rating:</strong> {this.state.average_rating}</p>
 
+
               <p className="justify">{this.state.ballpark.description}</p>
             </div>
-            <div className="c5">
+            <div className="c4 ballpark-reviewform-holder">
+            <ReviewForm onChange={this.displayReviews.bind(this)} ballparkId={this.props.params.ballparkId} />
             </div>
           </div>
           </div>
@@ -70,13 +99,14 @@ class Ballpark extends React.Component {
           <div className="container-f">
 
 
-          <ReviewList onChange={this.getBallpark.bind(this)} ballparkId={this.props.params.ballparkId} />
+          <ReviewList reviews={this.state.reviews} ballparkId={this.props.params.ballparkId} />
 
           </div>
+          </ReactCSSTransitionGroup>
           </Loader>
       </div>
 
-    </ReactCSSTransitionGroup>
+
    );
  }
 }

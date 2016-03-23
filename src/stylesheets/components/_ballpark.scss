@@ -11,8 +11,15 @@ vertical-align: middle;
   @extend .img-rounded;
   height: 60%;
   width: 60%;
-  padding: 1%;
+  padding: 0.5%;
   background-color: black;
+}
+
+.teamlogo {
+  height: 100px;
+  margin-top: -25%;
+  margin-bottom: 10%;
+  @extend .pull-right;
 }
 
 .margin-ballpark {
@@ -46,8 +53,10 @@ vertical-align: middle;
   border-radius: 8px;
   margin-bottom: 5%;
   margin-left: 2%;
+  margin-right: 3%;
 
 }
+
 
 .example-appear {
   opacity: 0.01;
