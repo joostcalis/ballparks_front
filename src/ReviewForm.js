@@ -56,7 +56,7 @@ class ReviewForm extends React.Component {
         <form role="form" className="form-main" onSubmit={this.createReview.bind(this)}>
           <div className="container-f form-card">
             <div className="r">
-              <div className="c12">
+              <div className="c12 review-form-center">
                 <h3> Visited this ballpark? Leave a Review! </h3>
               </div>
               </div>
@@ -71,7 +71,9 @@ class ReviewForm extends React.Component {
                   </div>
                 </div>
                 <div className="r form-row">
-                  <div className="c4">
+                  <div className="c3">
+                  </div>
+                  <div className="c2">
                     <div className="f-group">
                       <div className="small-form first-small-form">
                         <p><label>General:</label></p>
@@ -85,7 +87,7 @@ class ReviewForm extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="c4">
+                  <div className="c2">
                     <div className="f-group">
                       <div className="small-form selector">
                         <p><label>Food:</label></p>
@@ -99,7 +101,7 @@ class ReviewForm extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="c4">
+                  <div className="c2">
                     <div className="f-group">
                       <div className="small-form selector">
                         <p><label>Extra:</label></p>
@@ -113,12 +115,14 @@ class ReviewForm extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <div className="c3">
+                  </div>
                 </div>
                 <div className="r form-row">
                   <div className="c12">
                     <div className="f-group">
                       <p><label>Say something about your visit:</label></p>
-                      <textarea className="f-control" rows="8" ref="descriptionInput"></textarea>
+                      <textarea className="f-control" rows="5" ref="descriptionInput"></textarea>
                     </div>
                   </div>
                 </div>

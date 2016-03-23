@@ -16,6 +16,7 @@
 .quote {
   border: none;
   quotes: "\201C""\201D""\2018""\2019";
+  font-family: 'Francois One', sans-serif;
 }
 
 .quote:before {
@@ -43,10 +44,10 @@
   color: black;
   text-shadow: 1px 1px 4px black;
   margin-top: 10%;
-  font-weight: 700;
   opacity: 0;
   text-align: center;
   transition: all 1s linear;
+  font-family: 'Francois One', sans-serif;
 
 }
 
