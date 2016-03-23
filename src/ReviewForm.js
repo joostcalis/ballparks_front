@@ -53,47 +53,85 @@ class ReviewForm extends React.Component {
 
   render() {
     return(
-        <form role="form" onSubmit={this.createReview.bind(this)}>
-          <h3> Visited this ballpark? Leave a Review! </h3>
-          <div className="f-group">
-            <label>Name:</label>
-            <input type="text" ref="nameInput" className="f-control"></input>
-          </div>
-          <div className="f-group">
-            <label>General Experience:</label>
-            <select className="f-control" ref="generalExperienceInput">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div className="f-group">
-            <label>Food & Beverage:</label>
-            <select className="f-control" ref="concessionInput">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div className="f-group">
-            <label>Extra activities:</label>
-            <select className="f-control" ref="extraActivityInput">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div className="f-group">
-            <label>Say something about your visit:</label>
-            <textarea className="f-control" rows="3" ref="descriptionInput"></textarea>
-          </div>
-        <button type="submit" className="formbutton">Add Review</button>
+        <form role="form" className="form-main" onSubmit={this.createReview.bind(this)}>
+          <div className="container-f form-card">
+            <div className="r">
+              <div className="c12 review-form-center">
+                <h3> Visited this ballpark? Leave a Review! </h3>
+              </div>
+              </div>
+                <div className="r form-row">
+                  <div className="c12">
+                    <div className="f-group">
+                      <div className="medium-form">
+                        <p><label>Name:</label></p>
+                          <input type="text" ref="nameInput" className="f-control"></input>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="r form-row">
+                  <div className="c3">
+                  </div>
+                  <div className="c2">
+                    <div className="f-group">
+                      <div className="small-form first-small-form">
+                        <p><label>General:</label></p>
+                          <select className="f-control" ref="generalExperienceInput">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="c2">
+                    <div className="f-group">
+                      <div className="small-form selector">
+                        <p><label>Food:</label></p>
+                          <select className="f-control" ref="concessionInput">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="c2">
+                    <div className="f-group">
+                      <div className="small-form selector">
+                        <p><label>Extra:</label></p>
+                          <select className="f-control" ref="extraActivityInput">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="c3">
+                  </div>
+                </div>
+                <div className="r form-row">
+                  <div className="c12">
+                    <div className="f-group">
+                      <p><label>Say something about your visit:</label></p>
+                      <textarea className="f-control" rows="5" ref="descriptionInput"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div className="r">
+                  <div className="c12">
+                    <button type="submit" className="formbutton">Add Review</button>
+                  </div>
+                </div>
+              </div>
       </form>
     );
   }

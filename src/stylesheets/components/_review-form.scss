@@ -1,5 +1,10 @@
+.form-inline {
+  @extend .form-inline;
+}
+
 .f-group {
   @extend .form-group;
+
 }
 
 .f-control {
@@ -9,4 +14,35 @@
 .formbutton {
   @extend .btn;
   @extend .btn-default;
+}
+
+.small-form {
+  // @extend .col-xs-6;
+}
+
+.medium-form {
+  @extend .col-xs-8;
+  margin-left: 15%;
+}
+
+.first-small-form {
+
+}
+
+.selector {
+  @extend .center-block;
+}
+
+.form-row {
+  margin-bottom: 3%;
+}
+
+.form-card {
+  background:rgba(255,255,255, 0.2);
+  border-radius: 8px;
+}
+
+.review-form-center {
+  text-align: center;
+  margin-bottom: 3%;
 }

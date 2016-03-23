@@ -5,10 +5,48 @@ vertical-align: middle;
 }
 
 .image-holder {
+  margin-left: 5%;
+  margin-bottom: 5%;
   @extend .pull-right;
   @extend .img-rounded;
   height: 60%;
   width: 60%;
+  padding: 1%;
+  background-color: black;
+}
+
+.margin-ballpark {
+  margin-bottom: -2%;
+  text-align: center;
+  background-color: rgba(255,255,255, 1);
+  border-radius: 8px;
+  margin-left: 2%;
+  margin-top: 3%;
+  position: relative;
+  z-index: 5;
+  vertical-align: top;
+
+}
+
+
+
+
+
+.ballpark-card {
+  background-color: rgba(255,255,255, 0.3);
+  padding-bottom: 2%;
+  border-radius: 8px;
+  margin-bottom: 5%;
+
+}
+
+.ballpark-content {
+  background-color: rgba(255,255,255, 1);
+  padding: 4%;
+  border-radius: 8px;
+  margin-bottom: 5%;
+  margin-left: 2%;
+
 }
 
 .example-appear {

@@ -47,8 +47,8 @@
 
 }
 
-*:focus {
-    outline: 0 !important;
+* {
+  font-family: 'Hind', sans-serif;
 }
 
 .dashboard-inactive {
@@ -79,9 +79,8 @@ span {
 
 .dashboard-card {
   margin-top: .05%;
-  background:rgba(255,255,255, 0.2);
+  background:rgba(255,255,255, 0.1);
   padding-bottom: 2%;
-  box-shadow: 5px 5px 3px #888888;
   margin-bottom: 5%;
   margin-left: 2%;
   margin-right: 2%;
