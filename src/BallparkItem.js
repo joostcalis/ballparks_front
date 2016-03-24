@@ -18,14 +18,22 @@ class BallparkItem extends React.Component {
      id: this.props.id,
      name: this.props.name,
      average_rating: this.props.average_rating,
-     logo: this.props.logo
+     logo: this.props.logo,
+     league: this.props.league
    });
+   console.log(this.props.league);
  }
 
  render() {
+   if (this.props.league === "nl_east" || this.props.league === "nl_central" || this.props.league === "nl_west") {
+     var idName = "nl";
+   }
+   else {
+     var idName = "";
+   }
    return(
       <Link className="ballparkLink" to={`/ballparks/${this.state.id}`}>
-       <li className="li-gr-item" id={this.props.classId}>
+       <li className="li-gr-item" id={idName}>
          {this.state.name}<span className="ballpark-rating">({this.state.average_rating})</span>
        </li>
        </Link>

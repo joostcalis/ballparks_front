@@ -30,7 +30,7 @@ class Latest10 extends React.Component {
 
                {this.state.latest10.map(function(review, i) {
                  return(
-                   <BallparkItem key={review.id} id={review.id} name={review.ballpark.name} team={review.ballpark.team} city={review.ballpark.city} description={review.ballpark.description} average_rating={review.ballpark.average_rating} />
+                   <BallparkItem key={review.id} id={review.ballpark.id} name={review.ballpark.name} team={review.ballpark.team} city={review.ballpark.city} description={review.ballpark.description} average_rating={review.ballpark.average_rating} league={review.ballpark.league} />
                  );
                }, this)}
              </div>

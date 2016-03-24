@@ -52,7 +52,7 @@ class Top10 extends React.Component {
 
                {this.state.top10.map(function(ballpark, i) {
                  return(
-                   <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} />
+                   <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.league} />
                  );
                }, this)}
              </div>

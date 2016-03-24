@@ -50,7 +50,7 @@ class BallparkList extends React.Component {
                 <div className="li-gr">
               {this.state.al_west.map(function(ballpark, i) {
                 return(
-                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} />
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.leage} />
                 );
               }, this)}
                 </div>
@@ -61,7 +61,7 @@ class BallparkList extends React.Component {
                 <div className="li-gr">
               {this.state.al_central.map(function(ballpark, i) {
                 return(
-                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} />
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.leage} />
                 );
               }, this)}
                 </div>
@@ -73,7 +73,7 @@ class BallparkList extends React.Component {
                 <div className="li-gr">
               {this.state.al_east.map(function(ballpark, i) {
                 return(
-                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} />
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.leage} />
                 );
               }, this)}
                 </div>
@@ -93,7 +93,7 @@ class BallparkList extends React.Component {
                 <div className="li-gr">
               {this.state.nl_west.map(function(ballpark, i) {
                 return(
-                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} classId= "nl" />
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.league} classId= "nl" />
                 );
               }, this)}
                 </div>
@@ -105,7 +105,7 @@ class BallparkList extends React.Component {
                 <div className="li-gr">
               {this.state.nl_central.map(function(ballpark, i) {
                 return(
-                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} classId= "nl" />
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.league} classId= "nl" />
                 );
               }, this)}
                 </div>
@@ -115,7 +115,7 @@ class BallparkList extends React.Component {
                 <div className="li-gr">
               {this.state.nl_east.map(function(ballpark, i) {
                 return(
-                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} classId= "nl" />
+                  <BallparkItem key={ballpark.id} id={ballpark.id} name={ballpark.name} team={ballpark.team} city={ballpark.city} description={ballpark.description} average_rating={ballpark.average_rating} logo={ballpark.team_logo} league={ballpark.league} classId= "nl" />
                 );
               }, this)}
                 </div>
