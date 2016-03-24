@@ -57,6 +57,12 @@ class Ballpark extends React.Component {
  }
 
  render() {
+   if (this.state.ballpark.league === "nl_east" || this.state.ballpark.league === "nl_central" || this.state.ballpark.league === "nl_west") {
+     var imageSource = "http://s18.postimg.org/5m0u366qh/nl_logo1.png";
+   }
+   else {
+     var imageSource = "http://s10.postimg.org/v9uele0c9/american_leage.png";
+   }
    return(
 
 

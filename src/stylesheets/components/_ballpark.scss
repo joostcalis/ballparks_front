@@ -57,6 +57,13 @@ vertical-align: middle;
 
 }
 
+.league-logo-small {
+  height: 50px;
+  margin-top: -5%;
+  margin-bottom: 10%;
+  @extend .pull-left;
+}
+
 
 .example-appear {
   opacity: 0.01;
