@@ -8,6 +8,10 @@ import jQuery from 'jquery';
       jQuery.getJSON( "https://ballparks.herokuapp.com/ballparks", onDone );
     }
 
+    index1( onDone ) {
+      jQuery.getJSON( "http://m.mlb.com/gdcross/components/game/mlb/year_2016/month_03/day_29/master_scoreboard.json", onDone );
+    }
+
     show( onDone, ballparkId ) {
       jQuery.getJSON( "https://ballparks.herokuapp.com/ballparks/" + ballparkId + ".json", onDone );
     }
