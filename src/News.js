@@ -31,13 +31,23 @@ class News extends React.Component {
     }
 
    model.news.index(onDone);
-   this.slider(0)
+   this.changeIndex(0)
  }
 
- slider(counter){
-   console.log(counter);
+ fadeOutNews(counter) {
+   let component = this;
+   jQuery("#newslinkitem").fadeOut("slow");
+   setTimeout(component.changeIndex.bind(this), 505, counter);
+ }
+ fadeInNews(counter) {
+   let component = this;
+   jQuery("#newslinkitem").fadeIn("slow");
+   setTimeout(component.fadeOutNews.bind(this), 10000, counter);
+ }
 
-   jQuery("newsfeed").fadeOut( "slow");
+ changeIndex(counter){
+   let component = this;
+   console.log(counter);
 
    let newslist = this.state.news;
    let counter1 = Number(counter);
@@ -49,14 +59,11 @@ class News extends React.Component {
    counter1 += 1
   }
 
-   this.setState({
+   component.setState({
      counter: counter1
    });
-
-   console.log(this.state.counter);
-
-   setTimeout(this.slider.bind(this), 10000, counter1);
-
+   console.log(component.state.counter);
+   setTimeout(component.fadeInNews.bind(this), 250, counter1);
  }
 
  render() {
@@ -73,10 +80,10 @@ class News extends React.Component {
 
    return(
 
-       <a href={newsItemLink} target="_blank" className="newslink">
+       <a href={newsItemLink} target="_blank" className="newslink" id="newslinkitem">
         <strong>MLB news:</strong> {newsItem1}
       </a>
-    
+
 
 
    );

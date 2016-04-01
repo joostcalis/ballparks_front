@@ -24,14 +24,12 @@ class Dashboard extends React.Component {
      nl_central: [],
      nl_east: [],
      mlb: [],
-     games: [],
      latest10Reviews: []
    };
  }
 
  componentDidMount() {
    this.loadBallparks();
-   this.loadBallparks1();
  }
 
  loadBallparks(event) {
@@ -53,21 +51,6 @@ class Dashboard extends React.Component {
    }
 
    model.ballparks.index( onDone );
- }
-
- loadBallparks1(event) {
-   let component = this;
-
-   function onDone(data) {
-      console.log(data);
-
-      component.setState({
-        games: data.data.games.game
-      });
-      console.log(component.state.games)
-   }
-
-   model.ballparks.index1( onDone );
  }
 
  completeList(){

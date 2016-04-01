@@ -54,6 +54,15 @@ import jQuery from 'jquery';
 
  }
 
+ class Scores {
+    constructor() {
+    }
+
+    index( onDone ) {
+      jQuery.getJSON( "http://m.mlb.com/gdcross/components/game/mlb/year_2016/month_03/day_31/master_scoreboard.json", onDone );
+    }
+ }
+
 
 
  class Model {
@@ -61,6 +70,7 @@ import jQuery from 'jquery';
        this.ballparks = new Ballparks;
        this.ballparkReviews = new BallparkReviews;
        this.news = new News;
+       this.scores = new Scores;
     }
  }
 

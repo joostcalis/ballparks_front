@@ -1,0 +1,12 @@
+.scoreboard-item {
+  margin-top: 2%;
+  margin-left: 6%;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 1%;
+  text-align: left;
+}
+
+.inning {
+  @extend .pull-right;
+}
