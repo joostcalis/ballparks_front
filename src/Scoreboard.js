@@ -17,21 +17,34 @@ class Scoreboard extends React.Component {
 
  componentDidMount() {
    this.loadGames();
+   this.timer = setInterval(this.loadGames.bind(this), 10000);
+ }
+
+ componentWillUnmount(){
+   clearInterval(this.timer);
  }
 
  loadGames(event) {
    let component = this;
 
+
    function onDone(data) {
       console.log(data);
+      let newGames = data.data.games.game;
 
-      component.setState({
-        games: data.data.games.game,
-        loaded: true,
-      });
+      component.stateUpdate(newGames);
    }
 
    model.scores.index( onDone );
+
+ }
+
+ stateUpdate(newgames) {
+   let component = this;
+   component.setState({
+     games: newgames,
+     loaded: true
+   })
  }
 
  getScore(game, homeAway) {
@@ -66,8 +79,7 @@ class Scoreboard extends React.Component {
      <div className="container">
       <div className="r scoreboard-main">
      {this.state.games.map(function(game, i) {
-       console.log(game);
-       console.log(game.linescore);
+       console.log("i live in scoreboard render");
        return(
          <ScoreboardItem key={game.venue_id} id={game.venue_id} hometeam={game.home_team_name} homecity={game.home_team_city} awayteam={game.away_team_name} awaycity={game.away_team_city} homescore={this.getScore(game, "Home")} awayscore={this.getScore(game, "Away")} status={game.status.status} inning={this.getInning(game)} />
 

@@ -10,8 +10,21 @@ class ScoreboardItem extends React.Component {
    };
  }
 
+
  componentDidMount() {
-   this.setState({
+   this.checkChanges();
+   this.timer = setInterval(this.checkChanges.bind(this), 10000)
+ }
+
+ componentWillUnmount() {
+   clearInterval(this.timer);
+ }
+
+
+ checkChanges(){
+   let component = this;
+   console.log("i live in checkchanges")
+   component.setState({
      id: this.props.id,
      homescore: this.props.homescore,
      awayscore: this.props.awayscore,
@@ -21,8 +34,8 @@ class ScoreboardItem extends React.Component {
      awaycity: this.props.awaycity,
      status: this.props.status,
      inning: this.props.inning
-
    });
+
  }
 
  render() {

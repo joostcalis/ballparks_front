@@ -59,7 +59,7 @@ import jQuery from 'jquery';
     }
 
     index( onDone ) {
-      jQuery.getJSON( "http://m.mlb.com/gdcross/components/game/mlb/year_2016/month_03/day_31/master_scoreboard.json", onDone );
+      jQuery.getJSON( "http://m.mlb.com/gdcross/components/game/mlb/year_2016/month_04/day_01/master_scoreboard.json", onDone );
     }
  }
 
