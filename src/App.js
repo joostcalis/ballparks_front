@@ -14,6 +14,7 @@ class App extends React.Component {
     };
   }
 
+
   continueSwitch(){
     let continue1 = !this.state.continue;
     this.setState({
